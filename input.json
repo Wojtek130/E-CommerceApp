@@ -1,9 +1,207 @@
 {
   "lemon": {
-    "path" : "lemonPic.jpg",
+    "path" : "./img/lemon.jpg",
     "isFruit" : true,
-    "price" : 5,
-    "tags": ["citrus", "yellow"]
+    "price" : 0.9,
+    "tags": ["citrus"]
+  },
+  "strawberry": {
+    "path" : "./img/strawberry.jpg",
+    "isFruit" : true,
+    "price" : 2,
+    "tags": ["seasonal", "berries"]
+  },
+  "raspberry": { 
+    "path" : "./img/raspberry.jpg",
+    "isFruit" : true,
+    "price" : 2.1,
+    "tags": ["seasonal", "berries"]
+  },
+  "lime": {
+    "path" : "./img/lime.jpg",
+    "isFruit" : true,
+    "price" : 1.7,
+    "tags": ["citrus"]
+  },
+  "grapefruit": {
+    "path" : "./img/grapefruit.jpg",
+    "isFruit" : true,
+    "price" : 3,
+    "tags": ["citrus"]
+  },
+  "blackberry": {
+    "path" : "./img/blackberry.jpg",
+    "isFruit" : true,
+    "price" : 2.1,
+    "tags": ["seasonal", "berries"]
+  },
+  "apple": {
+    "path" : "./img/apple.jpg",
+    "isFruit" : true,
+    "price" : 0.7,
+    "tags": ["seasonal"]
+  },
+  "banana": {
+    "path" : "./img/banana.jpg",
+    "isFruit" : true,
+    "price" : 1.1,
+    "tags": ["seasonal"]
+  },
+  "avocado": {
+    "path" : "./img/avocado.jpg",
+    "isFruit" : true,
+    "price" : 4.5,
+    "tags": ["seasonal"]
+  },
+  "blueberry": {
+    "path" : "./img/blueberry.jpg",
+    "isFruit" : true,
+    "price" : 3.8,
+    "tags": ["seasonal"]
+  },
+  "dragon_fruit": {
+    "path" : "./img/dragon_fruit.jpg",
+    "isFruit" : true,
+    "price" : 4.2,
+    "tags": ["exotic"]
+  },
+  "mango": {
+    "path" : "./img/mango.jpg",
+    "isFruit" : true,
+    "price" : 4.2,
+    "tags": []
+  },
+  "pineapple": {
+    "path" : "./img/pineapple.jpg",
+    "isFruit" : true,
+    "price" : 2.3,
+    "tags": []
+  },
+  "durian": {
+    "path" : "./img/durian.jpg",
+    "isFruit" : true,
+    "price" : 5.6,
+    "tags": ["exotic"]
+  },
+  "cherry": {
+    "path" : "./img/cherry.jpg",
+    "isFruit" : true,
+    "price" : 2,
+    "tags": ["seasonal", "berries"]
+  },
+  "peach": {
+    "path" : "./img/peach.jpg",
+    "isFruit" : true,
+    "price" : 1.8,
+    "tags": []
+  },
+  "guava": {
+    "path" : "./img/guava.jpg",
+    "isFruit" : true,
+    "price" : 4,
+    "tags": ["exotic"]
+  },
+  "kiwi": {
+    "path" : "./img/kiwi.jpg",
+    "isFruit" : true,
+    "price" : 1.5,
+    "tags": ["seasonal"]
+  },
+  "spinach": {
+    "path" : "./img/spinach.jpg",
+    "isFruit" : false,
+    "price" : 10,
+    "tags": ["seasonal"]
+  },
+  "carrot": {
+    "path" : "./img/carrot.jpg",
+    "isFruit" : false,
+    "price" : 1,
+    "tags": []
+  },
+  "broccoli": {
+    "path" : "./img/broccoli.jpg",
+    "isFruit" : false,
+    "price" : 2.1,
+    "tags": []
+  },
+  "garlic": {
+    "path" : "./img/garlic.jpg",
+    "isFruit" : false,
+    "price" : 1.5,
+    "tags": []
+  },
+  "green_peas": {
+    "path" : "./img/green_peas.jpg",
+    "isFruit" : false,
+    "price" : 4.1,
+    "tags": ["beans"]
+  },
+  "asparagus": {
+    "path" : "./img/asparagus.jpg",
+    "isFruit" : false,
+    "price" : 3.6,
+    "tags": []
+  },
+  "potato": {
+    "path" : "./img/potato.jpg",
+    "isFruit" : false,
+    "price" : 1,
+    "tags": []
+  },
+  "sweet_potato": {
+    "path" : "./img/sweet_potato.jpg",
+    "isFruit" : false,
+    "price" : 3,
+    "tags": []
+  },
+  "beets": {
+    "path" : "./img/beets.jpg",
+    "isFruit" : false,
+    "price" : 1.8,
+    "tags": []
+  },
+  "tomato": {
+    "path" : "./img/tomato.jpg",
+    "isFruit" : false,
+    "price" : 2,
+    "tags": []
+  },
+  "cauliflower": {
+    "path" : "./img/cauliflower.jpg",
+    "isFruit" : false,
+    "price" : 2.4,
+    "tags": []
+  },
+  "cabbage": {
+    "path" : "./img/cabbage.jpg",
+    "isFruit" : false,
+    "price" : 1.6,
+    "tags": []
+  },
+  "celery": {
+    "path" : "./img/celery.jpg",
+    "isFruit" : false,
+    "price" : 3.1,
+    "tags": ["seasonal"]
+  },
+  "bell_pepper": {
+    "path" : "./img/bell_pepper.jpg",
+    "isFruit" : false,
+    "price" : 2.8,
+    "tags": []
+  },
+  "soy_beans": {
+    "path" : "./img/soy_beans.jpg",
+    "isFruit" : false,
+    "price" : 3,
+    "tags": ["beans"]
+  },
+  "onion": {
+    "path" : "./img/onion.jpg",
+    "isFruit" : false,
+    "price" : 1,
+    "tags": []
   }
 }
 
