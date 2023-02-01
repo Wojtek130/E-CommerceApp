@@ -1,0 +1,110 @@
+UI - React.js, SCSS (jak się da), BEM
+DB - ORM Sequelize, Postgres
+endpointy:
+    / - main page
+    /products - list of products (json objects)
+    /login - login form
+    /registration - form
+    /products/id - product's details
+    /cart - cart's details
+    /purchase - purchase form
+
+enum planttype = {"male", "female"}
+Class Product:
+    + name : string
+    + isFruit : bool
+    + price : int (per 1kg)
+    + tags: string[] (exotic, seasonal, citrus, legume, berries)
+
+Class Tag:
+    + name : string
+
+Class User:
+    + username : string
+    + password : ???
+    + email : string
+
+Class FullOrder:
+    + UserID <- foreign key
+    + completed : bool
+    + getCost() -> cały koszt
+
+Class SingleOrder:
+    + FullOrderId <- foreign key
+    + ProductId
+    + Quantity : int
+
+
+Example:
+FullOrder {
+    id : 1,
+    completed : False
+
+    getCost()
+}
+
+SingleOrder1 {
+    id: 1
+    FullOrderID : 1
+    ProductID : 2
+    Quantity: 5
+}
+
+select ProductID, Quantity from SingleOrder where FullOrderID==1 JOIN Product on ProductID
+
+
+Class 
+    |userID |productID  |Quantity
+    |1      |2          |3
+
+
+
+
+Asocjacje:
+Product - Tag : M : N
+FullOrder - SingleOrder : 1 : N
+User - FullOrder : 1 : N
+
+
+git pull
+npx:sequelize migrate
+
+npx sequelize-cli migration:generate --name first_mgt - commit
+git push
+
+git pull
+npx sequelize-cli db:migrate - pull
+npm init
+
+npm install express --save
+npm install costam --save-dev
+
+
+Apple   1
+Plum    2
+Cherry  3
+-------------
+Red     4
+Big     5
+
+Apple - Red, Big
+Plum - Big
+Cherry - Red
+(Product join ProductTag on ProductID) join on TagID
+ProductTag
+    + ProductID
+    + TagID
+
+ProductTag(1, 4)
+ProductTag(1, 5)
+ProductTag(2, 5)
+ProductTag(3, 4)
+
+autentication
+without login - /, /cart
+
+Admin ???
+
+
+
+
