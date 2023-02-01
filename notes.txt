@@ -14,7 +14,7 @@ Class Product:
     + name : string
     + isFruit : bool
     + price : int (per 1kg)
-    + tags: string[] (exotic, seasonal, citrus, legume, berries)
+    + tags: string[] (exotic, seasonal, citrus, beans, berries)
     + photoPath: string
 
 Class Tag:
