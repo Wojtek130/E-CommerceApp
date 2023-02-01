@@ -75,7 +75,7 @@ git push
 
 git pull
 npx sequelize-cli db:migrate - pull
-npm init
+npm install
 
 npm install express --save
 npm install costam --save-dev
@@ -112,3 +112,12 @@ Admin ???
 {"lemon" : {
     tags: ["citrus", "yellow"]},
 }
+
+photos -> greengrocers/assets
+
+run backend server:
+npm run dev
+
+run frontend server:
+cd greengrocers/
+npm start
