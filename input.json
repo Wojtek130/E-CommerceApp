@@ -1,0 +1,10 @@
+{
+  "lemon": {
+    "path" : "lemonPic.jpg",
+    "isFruit" : true,
+    "price" : 5,
+    "tags": ["citrus", "yellow"]
+  }
+}
+
+
