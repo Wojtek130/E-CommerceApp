@@ -24,6 +24,7 @@ Class User:
     + username : string
     + password : ???
     + email : string
+    + token : string
 
 Class FullOrder:
     + UserID <- foreign key
@@ -121,3 +122,6 @@ npm run dev
 run frontend server:
 cd greengrocers/
 npm start
+
+create .env file
+wait for react server

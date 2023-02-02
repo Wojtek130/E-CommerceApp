@@ -16,7 +16,7 @@ db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
 
-db.User = require('../model/user')(sequelize, Sequelize);
+db.User = require('../models/user.model')(sequelize, Sequelize);
 // here db associations
 
 module.exports = db;
