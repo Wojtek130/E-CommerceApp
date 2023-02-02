@@ -29,7 +29,8 @@ Class User:
 Class FullOrder:
     + UserID <- foreign key
     + completed : bool
-    + getCost() -> cały koszt
+
+getCost() -> cały koszt
 
 Class SingleOrder:
     + FullOrderId <- foreign key
@@ -125,3 +126,5 @@ npm start
 
 create .env file
 wait for react server
+
+dodaj do .env DB_PORT = 5432

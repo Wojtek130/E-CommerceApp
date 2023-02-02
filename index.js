@@ -1,6 +1,7 @@
 const app = require("./app");
 const path = require("path");
 const shopRouter = require('./routes/shop.route');
+const sequelize = require('./config/database');
 
 const PORT = process.env.PORT || 3001;
 
@@ -13,6 +14,14 @@ app.use('', shopRouter);
 //   res.sendFile(path.resolve(__dirname, "greengrocers", "/public/index.html"));
 // });
 
-app.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
-});
+const start = async () => {
+  try {
+    await sequelize.authenticate();
+    await sequelize.sync();
+    app.listen(PORT, () => { console.log(`Server listening on ${PORT}`); });
+  } catch (e) {
+    console.log(e);
+  }
+};
+
+start();
