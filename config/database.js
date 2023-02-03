@@ -36,6 +36,7 @@ db.FullOrder.belongsTo(db.User);
 db.Product.belongsToMany(db.Tag, { through: "ProductTag" });
 db.Tag.belongsToMany(db.Product, { through: "ProductTag" });
 
+
 //module.exports = db;
 module.exports = sequelize;
 

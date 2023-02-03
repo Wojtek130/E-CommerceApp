@@ -26,6 +26,6 @@ module.exports = function (sequelize) {
             type: DataTypes.STRING
         }
     })
-
+    Product.attributes = Product.rawAttributes;
     return Product;
 };

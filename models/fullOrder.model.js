@@ -6,6 +6,6 @@ module.exports = function (sequelize) {
         id: { type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true },
         completed: { type: DataTypes.BOOLEAN, defaultvalue: false, notEmpty: true },
     })
-
+    FullOrder.attributes = FullOrder.rawAttributes;
     return FullOrder;
 };

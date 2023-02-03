@@ -1,21 +1,21 @@
 {
   "development": {
-    "username": "postgres",
-    "password": "postgres",
+    "username": "wojtek",
+    "password": "1234",
     "database": "shopdb",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "postgres"
   },
   "test": {
-    "username": "postgres",
-    "password": "postgres",
+    "username": "wojtek",
+    "password": "1234",
     "database": "shopdb",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
   "production": {
-    "username": "postgres",
-    "password": "postgres",
+    "username": "wojtek",
+    "password": "1234",
     "database": "shopdb",
     "host": "127.0.0.1",
     "dialect": "postgres"

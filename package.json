@@ -10,7 +10,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build": "cd greengrocers&& npm install && npm run build"
+    "build": "cd greengrocers&& npm install && npm run build",
+    "makemigrations": "node node_modules/sequelize-auto-migrations/bin/makemigration.js",
+    "migrate": "node node_modules/sequelize-auto-migrations/bin/runmigration.js"
   },
   "repository": {
     "type": "git",
