@@ -14,14 +14,3 @@ app.use('', shopRouter);
 //   res.sendFile(path.resolve(__dirname, "greengrocers", "/public/index.html"));
 // });
 
-const start = async () => {
-  try {
-    await sequelize.authenticate();
-    await sequelize.sync();
-    app.listen(PORT, () => { console.log(`Server listening on ${PORT}`); });
-  } catch (e) {
-    console.log(e);
-  }
-};
-
-start();
