@@ -6,6 +6,12 @@ module.exports = function (sequelize) {
     name: { type: DataTypes.STRING, allowNull: false },
   });
   Tag.attributes = Tag.rawAttributes;
-
+  Tag.associate = function (models) {
+    Tag.belongsToMany(models.Product, {
+      through: models.ProductTag,
+      foreignKey: "TagId",
+      otherKey: "ProductId",
+    });
+  };
   return Tag;
 };

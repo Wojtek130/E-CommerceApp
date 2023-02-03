@@ -16,8 +16,8 @@ var Sequelize = require('sequelize');
 
 var info = {
     "revision": 1,
-    "name": "initial_mgt",
-    "created": "2023-02-03T18:29:00.382Z",
+    "name": "init",
+    "created": "2023-02-03T22:05:51.924Z",
     "comment": ""
 };
 
@@ -245,6 +245,30 @@ var migrationCommands = [{
         params: [
             "ProductTags",
             {
+                "ProductId": {
+                    "type": Sequelize.INTEGER,
+                    "unique": "ProductTags_TagId_ProductId_unique",
+                    "onUpdate": "CASCADE",
+                    "onDelete": "CASCADE",
+                    "primaryKey": true,
+                    "field": "ProductId",
+                    "references": {
+                        "model": "Products",
+                        "key": "id"
+                    }
+                },
+                "TagId": {
+                    "type": Sequelize.INTEGER,
+                    "unique": "ProductTags_TagId_ProductId_unique",
+                    "onUpdate": "CASCADE",
+                    "onDelete": "CASCADE",
+                    "primaryKey": true,
+                    "field": "TagId",
+                    "references": {
+                        "model": "Tags",
+                        "key": "id"
+                    }
+                },
                 "createdAt": {
                     "type": Sequelize.DATE,
                     "field": "createdAt",
@@ -254,28 +278,6 @@ var migrationCommands = [{
                     "type": Sequelize.DATE,
                     "field": "updatedAt",
                     "allowNull": false
-                },
-                "ProductId": {
-                    "type": Sequelize.INTEGER,
-                    "field": "ProductId",
-                    "onUpdate": "CASCADE",
-                    "onDelete": "CASCADE",
-                    "references": {
-                        "model": "Products",
-                        "key": "id"
-                    },
-                    "primaryKey": true
-                },
-                "TagId": {
-                    "type": Sequelize.INTEGER,
-                    "field": "TagId",
-                    "onUpdate": "CASCADE",
-                    "onDelete": "CASCADE",
-                    "references": {
-                        "model": "Tags",
-                        "key": "id"
-                    },
-                    "primaryKey": true
                 }
             },
             {}

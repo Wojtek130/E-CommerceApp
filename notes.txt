@@ -128,3 +128,5 @@ create .env file
 wait for react server
 
 dodaj do .env DB_PORT = 5432
+
+nie pobierają się produkty bez tagów

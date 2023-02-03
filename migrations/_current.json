@@ -209,6 +209,30 @@
         "ProductTags": {
             "tableName": "ProductTags",
             "schema": {
+                "ProductId": {
+                    "references": {
+                        "model": "Products",
+                        "key": "id"
+                    },
+                    "field": "ProductId",
+                    "primaryKey": true,
+                    "onDelete": "CASCADE",
+                    "onUpdate": "CASCADE",
+                    "unique": "ProductTags_TagId_ProductId_unique",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "TagId": {
+                    "references": {
+                        "model": "Tags",
+                        "key": "id"
+                    },
+                    "field": "TagId",
+                    "primaryKey": true,
+                    "onDelete": "CASCADE",
+                    "onUpdate": "CASCADE",
+                    "unique": "ProductTags_TagId_ProductId_unique",
+                    "seqType": "Sequelize.INTEGER"
+                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -218,28 +242,6 @@
                     "allowNull": false,
                     "field": "updatedAt",
                     "seqType": "Sequelize.DATE"
-                },
-                "ProductId": {
-                    "primaryKey": true,
-                    "references": {
-                        "model": "Products",
-                        "key": "id"
-                    },
-                    "onDelete": "CASCADE",
-                    "onUpdate": "CASCADE",
-                    "field": "ProductId",
-                    "seqType": "Sequelize.INTEGER"
-                },
-                "TagId": {
-                    "primaryKey": true,
-                    "references": {
-                        "model": "Tags",
-                        "key": "id"
-                    },
-                    "onDelete": "CASCADE",
-                    "onUpdate": "CASCADE",
-                    "field": "TagId",
-                    "seqType": "Sequelize.INTEGER"
                 }
             },
             "indexes": []
