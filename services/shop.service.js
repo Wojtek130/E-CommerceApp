@@ -9,7 +9,8 @@ const SingleOrder = db.SingleOrder;
 const getProductWithTags = async function () {
   const products = await Product.findAll({
     attributes: ["id", "name", "price", "isFruit"],
-    include: { model: Tag, required: true },
+    include: { model: Tag, required: false },
+    // required: false,
   });
   const out = new Array();
   products.forEach((p) => {
@@ -44,12 +45,11 @@ const getProductIdForName = async function (nameArg) {
   const out = await Product.findOne({
     attributes: ["id", "name"],
     where: {
-      name: nameArg
-    } 
+      name: nameArg,
+    },
   });
   return out["dataValues"]["id"];
 };
-
 
 module.exports = {
   getProductWithTags,
