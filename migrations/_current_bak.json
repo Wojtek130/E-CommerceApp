@@ -106,6 +106,12 @@
                     "field": "id",
                     "seqType": "Sequelize.INTEGER"
                 },
+                "completed": {
+                    "defaultvalue": false,
+                    "notEmpty": true,
+                    "field": "completed",
+                    "seqType": "Sequelize.BOOLEAN"
+                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -241,5 +247,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 1
 }
