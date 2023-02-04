@@ -1,28 +1,32 @@
 const fs = require("fs");
-let rawData = fs.readFileSync("config/input.json");
-let data = JSON.parse(rawData);
-console.log(data);
-tagMap = new Map();
-tagMap.set("citrus", 2);
-tagMap.set("seasonal", 3);
-tagMap.set("berries", 4);
-tagMap.set("exotic", 5);
-tagMap.set("beans", 6);
+const { getTags, getProductIdForName } = require("../services/shop.service");
 
-const out = new Array();
-Object.entries(data).forEach((entry, ind) => {
-  const [key, value] = entry;
-  console.log(value);
-  value.tags.forEach((t) => {
-      const pt = {
-        ProductId: ind+2,
-        TagId: tagMap.get(t),
+(async () => {
+  let rawData = fs.readFileSync("config/input.json");
+  let data = JSON.parse(rawData);
+  tagMap = new Map();
+  const tgs = await getTags();
+  tgs.forEach((t) => {
+    tagMap.set(t["name"], t["id"]);
+  });
+
+  const out = new Array();
+  for (const entry of Object.entries(data)) {
+    const [key, value] = entry;
+    // console.log(key);
+    let pt;
+    for (const t of value.tags) {
+      pt = {
+        ProductId: await getProductIdForName(key),
+        TagId: await tagMap.get(t),
         createdAt: new Date(),
         updatedAt: new Date(),
       };
       out.push(pt);
-    
-  });
-});
-let dataString = JSON.stringify(out);
-fs.writeFileSync("config/producttags.json", dataString);
+      console.log("???", pt);
+    }
+  }
+  console.log(out);
+  let dataString = JSON.stringify(out);
+  fs.writeFileSync("config/producttags.json", dataString);
+})();

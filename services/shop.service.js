@@ -18,6 +18,7 @@ const getProductWithTags = async function () {
     const price = p["dataValues"]["price"];
     const isFruit = p["dataValues"]["isFruit"];
     const tags = Array();
+
     p["Tags"].forEach((element) => {
       tags.push(element["dataValues"]["name"]);
     });
@@ -27,6 +28,31 @@ const getProductWithTags = async function () {
   return out;
 };
 
+const getTags = async function () {
+  const tags = await Tag.findAll({
+    attributes: ["id", "name"],
+  });
+  const out = new Array();
+  tags.forEach((t) => {
+    out.push(t["dataValues"]);
+  });
+  return out;
+  // console.log(tags);
+};
+
+const getProductIdForName = async function (nameArg) {
+  const out = await Product.findOne({
+    attributes: ["id", "name"],
+    where: {
+      name: nameArg
+    } 
+  });
+  return out["dataValues"]["id"];
+};
+
+
 module.exports = {
   getProductWithTags,
+  getTags,
+  getProductIdForName,
 };

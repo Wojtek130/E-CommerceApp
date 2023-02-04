@@ -5,8 +5,8 @@ const fs = require('fs');
 module.exports = {
   async up(queryInterface, Sequelize) {
     let rawData = fs.readFileSync("config/tags.json");
-    let data = JSON.parse(rawData);
-    return queryInterface.bulkInsert("Tags", data);
+    let data = await JSON.parse(rawData);
+    return await queryInterface.bulkInsert("Tags", data, {});
   },
 
   async down(queryInterface, Sequelize) {
