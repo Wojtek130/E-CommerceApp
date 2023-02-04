@@ -8,7 +8,7 @@ const SingleOrder = db.SingleOrder;
 
 const getProductWithTags = async function () {
   const products = await Product.findAll({
-    attributes: ["id", "name", "price", "isFruit"],
+    attributes: ["id", "name", "price", "isFruit", "photoPath"],
     include: { model: Tag, required: false },
     // required: false,
   });
@@ -18,12 +18,13 @@ const getProductWithTags = async function () {
     const name = p["dataValues"]["name"];
     const price = p["dataValues"]["price"];
     const isFruit = p["dataValues"]["isFruit"];
+    const photoPath = p["dataValues"]["photoPath"];
     const tags = Array();
 
     p["Tags"].forEach((element) => {
       tags.push(element["dataValues"]["name"]);
     });
-    const prod = { id: id, name: name, isFruit: isFruit, tags: tags };
+    const prod = { id: id, name: name, price: price, isFruit: isFruit, photoPath : photoPath, tags: tags };
     out.push(prod);
   });
   return out;
