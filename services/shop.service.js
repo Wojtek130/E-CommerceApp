@@ -83,6 +83,16 @@ const createUser = async function (userInfo) {
   return user;
 };
 
+const createFullOrder = async function (fullOrderInfo) {
+  const fullOrder = await FullOrder.create(fullOrderInfo);
+  return fullOrder;
+};
+
+const createSingleOrder = async function (singleOrderInfo) {
+  const singleOrder = await SingleOrder.create(singleOrderInfo);
+  return singleOrder;
+};
+
 module.exports = {
   getProductWithTags,
   getTags,
@@ -90,4 +100,6 @@ module.exports = {
   getUserByEmail,
   getUserByUserame,
   createUser,
+  createFullOrder,
+  createSingleOrder
 };

@@ -10,6 +10,8 @@ router.get("/api", shopController.helloFun);
 router.post("/login", loginController.login);
 router.post("/register", loginController.register);
 router.post("/logout", auth, loginController.logout);
+router.post("/completeOrder", auth, shopController.completeOrder);
+
 
 router.post("/welcome", auth, (req, res) => {
   return res.json({ user: { id: req.userId, username: req.userUsername } });
