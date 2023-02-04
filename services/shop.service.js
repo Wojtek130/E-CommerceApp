@@ -1,4 +1,5 @@
 // const {Product, ProductTag} = require("../models");
+const { User } = require("../models");
 const db = require("../models");
 const Product = db.Product;
 const Tag = db.Tag;
@@ -24,7 +25,14 @@ const getProductWithTags = async function () {
     p["Tags"].forEach((element) => {
       tags.push(element["dataValues"]["name"]);
     });
-    const prod = { id: id, name: name, price: price, isFruit: isFruit, photoPath : photoPath, tags: tags };
+    const prod = {
+      id: id,
+      name: name,
+      price: price,
+      isFruit: isFruit,
+      photoPath: photoPath,
+      tags: tags,
+    };
     out.push(prod);
   });
   return out;
@@ -52,8 +60,35 @@ const getProductIdForName = async function (nameArg) {
   return out["dataValues"]["id"];
 };
 
+const getUserByEmail = async function (emailArg) {
+  const out = await User.findOne({
+    where: {
+      email: emailArg,
+    },
+  });
+  return out;
+};
+
+const getUserByUserame = async function (usernameArg) {
+  const out = await User.findOne({
+    where: {
+      username: usernameArg,
+    },
+  });
+  console.log("out!!!!!!!!", out);
+  return out;
+};
+
+const createUser = async function (userInfo) {
+  const user = await User.create(userInfo);
+  return user;
+};
+
 module.exports = {
   getProductWithTags,
   getTags,
   getProductIdForName,
+  getUserByEmail,
+  getUserByUserame,
+  createUser,
 };
