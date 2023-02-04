@@ -75,7 +75,6 @@ const getUserByUserame = async function (usernameArg) {
       username: usernameArg,
     },
   });
-  console.log("out!!!!!!!!", out);
   return out;
 };
 

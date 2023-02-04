@@ -17,7 +17,46 @@ const AllProductsWithTags = async function (req, res) {
   res.json(out);
 };
 
-const login = async function (req, res) {};
+const login = async function (req, res) {
+
+  // Our login logic starts here
+  try {
+    // Get user input
+    const { username, password } = req.body;
+
+    // Validate user input
+    if (!(username && password)) {
+      res.status(400).send("All input is required");
+    }
+    // Validate if user exist in our database
+    const user = await getUserByUserame(username);
+
+    if (user && (await bcrypt.compare(password, user.password))) {
+      // Create token
+      const token = await jwt.sign(
+        { user_id: user.id, username },
+        process.env.TOKEN_KEY,
+        {
+          expiresIn: "2h",
+        }
+      );
+
+      // save user token
+      await user.update({ token: token })
+      await user.save()
+
+      // user
+      await res.status(200).json(user);
+    }
+    else {
+      res.status(400).send("Invalid Credentials");
+    }
+  } catch (err) {
+    console.log(err);
+  }
+  // Our register logic ends here
+};
+
 
 const register = async function (req, res) {
   try {
@@ -59,18 +98,17 @@ const register = async function (req, res) {
       
       // Create token
     const token = await jwt.sign(
-      { user_id: user.id, email },
+      { user_id: user.id, username },
       process.env.TOKEN_KEY,
       {
         expiresIn: "2h",
       }
     );
     // save user token
-    user.token = token;
     await user.update({ token: token })
     await user.save()
     // return new user
-    res.status(201).json(user);
+    await res.status(201).json(user);
   } catch (err) {
     console.log(err);
   }
