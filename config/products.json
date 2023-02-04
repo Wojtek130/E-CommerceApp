@@ -1,1 +1,274 @@
-[{"name":"lemon","price":0.9,"isFruit":true,"photoPath":"./img/lemon.jpg","createdAt":"2023-02-03T19:13:48.588Z","updatedAt":"2023-02-03T19:13:48.588Z"},{"name":"strawberry","price":2,"isFruit":true,"photoPath":"./img/strawberry.jpg","createdAt":"2023-02-03T19:13:48.589Z","updatedAt":"2023-02-03T19:13:48.589Z"},{"name":"raspberry","price":2.1,"isFruit":true,"photoPath":"./img/raspberry.jpg","createdAt":"2023-02-03T19:13:48.589Z","updatedAt":"2023-02-03T19:13:48.589Z"},{"name":"lime","price":1.7,"isFruit":true,"photoPath":"./img/lime.jpg","createdAt":"2023-02-03T19:13:48.589Z","updatedAt":"2023-02-03T19:13:48.589Z"},{"name":"grapefruit","price":3,"isFruit":true,"photoPath":"./img/grapefruit.jpg","createdAt":"2023-02-03T19:13:48.589Z","updatedAt":"2023-02-03T19:13:48.589Z"},{"name":"blackberry","price":2.1,"isFruit":true,"photoPath":"./img/blackberry.jpg","createdAt":"2023-02-03T19:13:48.590Z","updatedAt":"2023-02-03T19:13:48.590Z"},{"name":"apple","price":0.7,"isFruit":true,"photoPath":"./img/apple.jpg","createdAt":"2023-02-03T19:13:48.590Z","updatedAt":"2023-02-03T19:13:48.590Z"},{"name":"banana","price":1.1,"isFruit":true,"photoPath":"./img/banana.jpg","createdAt":"2023-02-03T19:13:48.590Z","updatedAt":"2023-02-03T19:13:48.590Z"},{"name":"avocado","price":4.5,"isFruit":true,"photoPath":"./img/avocado.jpg","createdAt":"2023-02-03T19:13:48.590Z","updatedAt":"2023-02-03T19:13:48.590Z"},{"name":"blueberry","price":3.8,"isFruit":true,"photoPath":"./img/blueberry.jpg","createdAt":"2023-02-03T19:13:48.591Z","updatedAt":"2023-02-03T19:13:48.591Z"},{"name":"dragon_fruit","price":4.2,"isFruit":true,"photoPath":"./img/dragon_fruit.jpg","createdAt":"2023-02-03T19:13:48.591Z","updatedAt":"2023-02-03T19:13:48.591Z"},{"name":"mango","price":4.2,"isFruit":true,"photoPath":"./img/mango.jpg","createdAt":"2023-02-03T19:13:48.591Z","updatedAt":"2023-02-03T19:13:48.591Z"},{"name":"pineapple","price":2.3,"isFruit":true,"photoPath":"./img/pineapple.jpg","createdAt":"2023-02-03T19:13:48.592Z","updatedAt":"2023-02-03T19:13:48.592Z"},{"name":"durian","price":5.6,"isFruit":true,"photoPath":"./img/durian.jpg","createdAt":"2023-02-03T19:13:48.593Z","updatedAt":"2023-02-03T19:13:48.593Z"},{"name":"cherry","price":2,"isFruit":true,"photoPath":"./img/cherry.jpg","createdAt":"2023-02-03T19:13:48.594Z","updatedAt":"2023-02-03T19:13:48.594Z"},{"name":"peach","price":1.8,"isFruit":true,"photoPath":"./img/peach.jpg","createdAt":"2023-02-03T19:13:48.594Z","updatedAt":"2023-02-03T19:13:48.594Z"},{"name":"guava","price":4,"isFruit":true,"photoPath":"./img/guava.jpg","createdAt":"2023-02-03T19:13:48.594Z","updatedAt":"2023-02-03T19:13:48.594Z"},{"name":"kiwi","price":1.5,"isFruit":true,"photoPath":"./img/kiwi.jpg","createdAt":"2023-02-03T19:13:48.594Z","updatedAt":"2023-02-03T19:13:48.594Z"},{"name":"spinach","price":10,"isFruit":false,"photoPath":"./img/spinach.jpg","createdAt":"2023-02-03T19:13:48.595Z","updatedAt":"2023-02-03T19:13:48.595Z"},{"name":"carrot","price":1,"isFruit":false,"photoPath":"./img/carrot.jpg","createdAt":"2023-02-03T19:13:48.595Z","updatedAt":"2023-02-03T19:13:48.595Z"},{"name":"broccoli","price":2.1,"isFruit":false,"photoPath":"./img/broccoli.jpg","createdAt":"2023-02-03T19:13:48.595Z","updatedAt":"2023-02-03T19:13:48.595Z"},{"name":"garlic","price":1.5,"isFruit":false,"photoPath":"./img/garlic.jpg","createdAt":"2023-02-03T19:13:48.596Z","updatedAt":"2023-02-03T19:13:48.596Z"},{"name":"green_peas","price":4.1,"isFruit":false,"photoPath":"./img/green_peas.jpg","createdAt":"2023-02-03T19:13:48.596Z","updatedAt":"2023-02-03T19:13:48.596Z"},{"name":"asparagus","price":3.6,"isFruit":false,"photoPath":"./img/asparagus.jpg","createdAt":"2023-02-03T19:13:48.596Z","updatedAt":"2023-02-03T19:13:48.596Z"},{"name":"potato","price":1,"isFruit":false,"photoPath":"./img/potato.jpg","createdAt":"2023-02-03T19:13:48.597Z","updatedAt":"2023-02-03T19:13:48.597Z"},{"name":"sweet_potato","price":3,"isFruit":false,"photoPath":"./img/sweet_potato.jpg","createdAt":"2023-02-03T19:13:48.597Z","updatedAt":"2023-02-03T19:13:48.597Z"},{"name":"beets","price":1.8,"isFruit":false,"photoPath":"./img/beets.jpg","createdAt":"2023-02-03T19:13:48.598Z","updatedAt":"2023-02-03T19:13:48.598Z"},{"name":"tomato","price":2,"isFruit":false,"photoPath":"./img/tomato.jpg","createdAt":"2023-02-03T19:13:48.598Z","updatedAt":"2023-02-03T19:13:48.598Z"},{"name":"cauliflower","price":2.4,"isFruit":false,"photoPath":"./img/cauliflower.jpg","createdAt":"2023-02-03T19:13:48.599Z","updatedAt":"2023-02-03T19:13:48.599Z"},{"name":"cabbage","price":1.6,"isFruit":false,"photoPath":"./img/cabbage.jpg","createdAt":"2023-02-03T19:13:48.599Z","updatedAt":"2023-02-03T19:13:48.599Z"},{"name":"celery","price":3.1,"isFruit":false,"photoPath":"./img/celery.jpg","createdAt":"2023-02-03T19:13:48.599Z","updatedAt":"2023-02-03T19:13:48.599Z"},{"name":"bell_pepper","price":2.8,"isFruit":false,"photoPath":"./img/bell_pepper.jpg","createdAt":"2023-02-03T19:13:48.600Z","updatedAt":"2023-02-03T19:13:48.600Z"},{"name":"soy_beans","price":3,"isFruit":false,"photoPath":"./img/soy_beans.jpg","createdAt":"2023-02-03T19:13:48.600Z","updatedAt":"2023-02-03T19:13:48.600Z"},{"name":"onion","price":1,"isFruit":false,"photoPath":"./img/onion.jpg","createdAt":"2023-02-03T19:13:48.600Z","updatedAt":"2023-02-03T19:13:48.600Z"}]
+[
+  {
+    "name": "lemon",
+    "price": 0.9,
+    "isFruit": true,
+    "photoPath": "./img/lemon.jpg",
+    "createdAt": "2023-02-03T19:13:48.588Z",
+    "updatedAt": "2023-02-03T19:13:48.588Z"
+  },
+  {
+    "name": "strawberry",
+    "price": 2,
+    "isFruit": true,
+    "photoPath": "./img/strawberry.jpg",
+    "createdAt": "2023-02-03T19:13:48.589Z",
+    "updatedAt": "2023-02-03T19:13:48.589Z"
+  },
+  {
+    "name": "raspberry",
+    "price": 2.1,
+    "isFruit": true,
+    "photoPath": "./img/raspberry.jpg",
+    "createdAt": "2023-02-03T19:13:48.589Z",
+    "updatedAt": "2023-02-03T19:13:48.589Z"
+  },
+  {
+    "name": "lime",
+    "price": 1.7,
+    "isFruit": true,
+    "photoPath": "./img/lime.jpg",
+    "createdAt": "2023-02-03T19:13:48.589Z",
+    "updatedAt": "2023-02-03T19:13:48.589Z"
+  },
+  {
+    "name": "grapefruit",
+    "price": 3,
+    "isFruit": true,
+    "photoPath": "./img/grapefruit.jpg",
+    "createdAt": "2023-02-03T19:13:48.589Z",
+    "updatedAt": "2023-02-03T19:13:48.589Z"
+  },
+  {
+    "name": "blackberry",
+    "price": 2.1,
+    "isFruit": true,
+    "photoPath": "./img/blackberry.jpg",
+    "createdAt": "2023-02-03T19:13:48.590Z",
+    "updatedAt": "2023-02-03T19:13:48.590Z"
+  },
+  {
+    "name": "apple",
+    "price": 0.7,
+    "isFruit": true,
+    "photoPath": "./img/apple.jpg",
+    "createdAt": "2023-02-03T19:13:48.590Z",
+    "updatedAt": "2023-02-03T19:13:48.590Z"
+  },
+  {
+    "name": "banana",
+    "price": 1.1,
+    "isFruit": true,
+    "photoPath": "./img/banana.jpg",
+    "createdAt": "2023-02-03T19:13:48.590Z",
+    "updatedAt": "2023-02-03T19:13:48.590Z"
+  },
+  {
+    "name": "avocado",
+    "price": 4.5,
+    "isFruit": true,
+    "photoPath": "./img/avocado.jpg",
+    "createdAt": "2023-02-03T19:13:48.590Z",
+    "updatedAt": "2023-02-03T19:13:48.590Z"
+  },
+  {
+    "name": "blueberry",
+    "price": 3.8,
+    "isFruit": true,
+    "photoPath": "./img/blueberry.jpg",
+    "createdAt": "2023-02-03T19:13:48.591Z",
+    "updatedAt": "2023-02-03T19:13:48.591Z"
+  },
+  {
+    "name": "dragon_fruit",
+    "price": 4.2,
+    "isFruit": true,
+    "photoPath": "./img/dragon_fruit.jpg",
+    "createdAt": "2023-02-03T19:13:48.591Z",
+    "updatedAt": "2023-02-03T19:13:48.591Z"
+  },
+  {
+    "name": "mango",
+    "price": 4.2,
+    "isFruit": true,
+    "photoPath": "./img/mango.jpg",
+    "createdAt": "2023-02-03T19:13:48.591Z",
+    "updatedAt": "2023-02-03T19:13:48.591Z"
+  },
+  {
+    "name": "pineapple",
+    "price": 2.3,
+    "isFruit": true,
+    "photoPath": "./img/pineapple.jpg",
+    "createdAt": "2023-02-03T19:13:48.592Z",
+    "updatedAt": "2023-02-03T19:13:48.592Z"
+  },
+  {
+    "name": "durian",
+    "price": 5.6,
+    "isFruit": true,
+    "photoPath": "./img/durian.jpg",
+    "createdAt": "2023-02-03T19:13:48.593Z",
+    "updatedAt": "2023-02-03T19:13:48.593Z"
+  },
+  {
+    "name": "cherry",
+    "price": 2,
+    "isFruit": true,
+    "photoPath": "./img/cherry.jpg",
+    "createdAt": "2023-02-03T19:13:48.594Z",
+    "updatedAt": "2023-02-03T19:13:48.594Z"
+  },
+  {
+    "name": "peach",
+    "price": 1.8,
+    "isFruit": true,
+    "photoPath": "./img/peach.jpg",
+    "createdAt": "2023-02-03T19:13:48.594Z",
+    "updatedAt": "2023-02-03T19:13:48.594Z"
+  },
+  {
+    "name": "guava",
+    "price": 4,
+    "isFruit": true,
+    "photoPath": "./img/guava.jpg",
+    "createdAt": "2023-02-03T19:13:48.594Z",
+    "updatedAt": "2023-02-03T19:13:48.594Z"
+  },
+  {
+    "name": "kiwi",
+    "price": 1.5,
+    "isFruit": true,
+    "photoPath": "./img/kiwi.jpg",
+    "createdAt": "2023-02-03T19:13:48.594Z",
+    "updatedAt": "2023-02-03T19:13:48.594Z"
+  },
+  {
+    "name": "spinach",
+    "price": 10,
+    "isFruit": false,
+    "photoPath": "./img/spinach.jpg",
+    "createdAt": "2023-02-03T19:13:48.595Z",
+    "updatedAt": "2023-02-03T19:13:48.595Z"
+  },
+  {
+    "name": "carrot",
+    "price": 1,
+    "isFruit": false,
+    "photoPath": "./img/carrot.jpg",
+    "createdAt": "2023-02-03T19:13:48.595Z",
+    "updatedAt": "2023-02-03T19:13:48.595Z"
+  },
+  {
+    "name": "broccoli",
+    "price": 2.1,
+    "isFruit": false,
+    "photoPath": "./img/broccoli.jpg",
+    "createdAt": "2023-02-03T19:13:48.595Z",
+    "updatedAt": "2023-02-03T19:13:48.595Z"
+  },
+  {
+    "name": "garlic",
+    "price": 1.5,
+    "isFruit": false,
+    "photoPath": "./img/garlic.jpg",
+    "createdAt": "2023-02-03T19:13:48.596Z",
+    "updatedAt": "2023-02-03T19:13:48.596Z"
+  },
+  {
+    "name": "green_peas",
+    "price": 4.1,
+    "isFruit": false,
+    "photoPath": "./img/green_peas.jpg",
+    "createdAt": "2023-02-03T19:13:48.596Z",
+    "updatedAt": "2023-02-03T19:13:48.596Z"
+  },
+  {
+    "name": "asparagus",
+    "price": 3.6,
+    "isFruit": false,
+    "photoPath": "./img/asparagus.jpg",
+    "createdAt": "2023-02-03T19:13:48.596Z",
+    "updatedAt": "2023-02-03T19:13:48.596Z"
+  },
+  {
+    "name": "potato",
+    "price": 1,
+    "isFruit": false,
+    "photoPath": "./img/potato.jpg",
+    "createdAt": "2023-02-03T19:13:48.597Z",
+    "updatedAt": "2023-02-03T19:13:48.597Z"
+  },
+  {
+    "name": "sweet_potato",
+    "price": 3,
+    "isFruit": false,
+    "photoPath": "./img/sweet_potato.jpg",
+    "createdAt": "2023-02-03T19:13:48.597Z",
+    "updatedAt": "2023-02-03T19:13:48.597Z"
+  },
+  {
+    "name": "beets",
+    "price": 1.8,
+    "isFruit": false,
+    "photoPath": "./img/beets.jpg",
+    "createdAt": "2023-02-03T19:13:48.598Z",
+    "updatedAt": "2023-02-03T19:13:48.598Z"
+  },
+  {
+    "name": "tomato",
+    "price": 2,
+    "isFruit": false,
+    "photoPath": "./img/tomato.jpg",
+    "createdAt": "2023-02-03T19:13:48.598Z",
+    "updatedAt": "2023-02-03T19:13:48.598Z"
+  },
+  {
+    "name": "cauliflower",
+    "price": 2.4,
+    "isFruit": false,
+    "photoPath": "./img/cauliflower.jpg",
+    "createdAt": "2023-02-03T19:13:48.599Z",
+    "updatedAt": "2023-02-03T19:13:48.599Z"
+  },
+  {
+    "name": "cabbage",
+    "price": 1.6,
+    "isFruit": false,
+    "photoPath": "./img/cabbage.jpg",
+    "createdAt": "2023-02-03T19:13:48.599Z",
+    "updatedAt": "2023-02-03T19:13:48.599Z"
+  },
+  {
+    "name": "celery",
+    "price": 3.1,
+    "isFruit": false,
+    "photoPath": "./img/celery.jpg",
+    "createdAt": "2023-02-03T19:13:48.599Z",
+    "updatedAt": "2023-02-03T19:13:48.599Z"
+  },
+  {
+    "name": "bell_pepper",
+    "price": 2.8,
+    "isFruit": false,
+    "photoPath": "./img/bell_pepper.jpg",
+    "createdAt": "2023-02-03T19:13:48.600Z",
+    "updatedAt": "2023-02-03T19:13:48.600Z"
+  },
+  {
+    "name": "soy_beans",
+    "price": 3,
+    "isFruit": false,
+    "photoPath": "./img/soy_beans.jpg",
+    "createdAt": "2023-02-03T19:13:48.600Z",
+    "updatedAt": "2023-02-03T19:13:48.600Z"
+  },
+  {
+    "name": "onion",
+    "price": 1,
+    "isFruit": false,
+    "photoPath": "./img/onion.jpg",
+    "createdAt": "2023-02-03T19:13:48.600Z",
+    "updatedAt": "2023-02-03T19:13:48.600Z"
+  }
+]
