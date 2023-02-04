@@ -23,7 +23,7 @@ module.exports = function (sequelize) {
       allowNull: false,
       min: 4,
     },
-    role: {
+    isAdmin: {
       type: DataTypes.BOOLEAN,
       defaultValue: false,
       allowNull: false,
