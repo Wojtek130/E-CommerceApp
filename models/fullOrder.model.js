@@ -6,11 +6,11 @@ module.exports = function (sequelize) {
     completed: { type: DataTypes.BOOLEAN, defaultvalue: false, notEmpty: true },
   });
   FullOrder.attributes = FullOrder.rawAttributes;
-  FullOrder.associate = function (models) {
-    FullOrder.belongsTo(models.User, {
-      foreignKey: "UserId",
-    });
-    FullOrder.hasMany(models.SingleOrder);
-  };
+  // FullOrder.associate = function (models) {
+  //   FullOrder.belongsTo(models.User, {
+  //     foreignKey: "UserId",
+  //   });
+  //   FullOrder.hasMany(models.SingleOrder);
+  // };
   return FullOrder;
 };

@@ -20,9 +20,9 @@ module.exports = function (sequelize) {
     },
   });
   ProductTag.attributes = ProductTag.rawAttributes;
-  ProductTag.associate = function (models) {
-    ProductTag.belongsTo(models.Product);
-    ProductTag.belongsTo(models.Tag);
-  };
+  // ProductTag.associate = function (models) {
+  //   ProductTag.belongsTo(models.Product);
+  //   ProductTag.belongsTo(models.Tag);
+  // };
   return ProductTag;
 };

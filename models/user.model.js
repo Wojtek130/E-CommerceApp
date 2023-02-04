@@ -31,8 +31,8 @@ module.exports = function (sequelize) {
     token: { type: DataTypes.STRING },
   });
   User.attributes = User.rawAttributes;
-  User.associate = function (models) {
-    User.hasMany(models.FullOrder);
-  };
+  // User.associate = function (models) {
+  //   User.hasMany(models.FullOrder);
+  // };
   return User;
 };

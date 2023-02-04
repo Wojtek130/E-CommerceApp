@@ -7,10 +7,10 @@ module.exports = function (sequelize) {
     quantity: { type: DataTypes.INTEGER, allowNull: false },
   });
   SingleOrder.attributes = SingleOrder.rawAttributes;
-  SingleOrder.associate = function (models) {
-    SingleOrder.belongsTo(models.FullOrder, {
-      foreignKey: "FullOrderId",
-    });
-  };
+  // SingleOrder.associate = function (models) {
+  //   SingleOrder.belongsTo(models.FullOrder, {
+  //     foreignKey: "FullOrderId",
+  //   });
+  // };
   return SingleOrder;
 };
