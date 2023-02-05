@@ -11,9 +11,13 @@
     justify-content: space-between;
     align-items: center;
     list-style-type: none;
-    background-color: $primary-color;
+    background: $primary-gradient;
+    // -webkit-gradient(linear, left top, right bottom, yellow, black)
     margin-top: 0;
-    padding : 2rem;
+    padding : 2rem 3rem;
+    // padding : 0;
+    max-height: 6rem;
+    margin : 0;
 }
 
 .navigation__link {
@@ -39,6 +43,7 @@
     &:hover{
         cursor: pointer;
     }
+    transform: scale(.4);
 }
 
 ul li {
