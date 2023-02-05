@@ -1,7 +1,7 @@
 import React from "react";
 import "./NavBar.component.scss";
 import logo from "../assets/logo2.png";
-import { LOGIN_ROUTE, SHOP_ROUTE, CART_ROUTE } from "../utils/paths.util";
+import { LOGIN_ROUTE, SHOP_ROUTE, CART_ROUTE, REGISTRATION_ROUTE } from "../utils/paths.util";
 //import {NavLink} from "react-router-dom";
 
 function NavBar() {
@@ -18,13 +18,16 @@ function NavBar() {
                     <li className="navigation__item">
                         <a className="navigation__link" href={CART_ROUTE}>Cart</a>
                     </li>
+                    <li className="navigation__item">
+                        <a className="navigation__link" href={REGISTRATION_ROUTE}>Registration</a>
+                    </li>
                     {isLoggedIn ?
                         <li className="navigation__item">
                             <a className="navigation__link" href={LOGIN_ROUTE}>Log out</a>
                         </li>
                         :
                         <li className="navigation__item">
-                            <a className="navigation__link" href={LOGIN_ROUTE}>Sing in</a>
+                            <a className="navigation__link" href={LOGIN_ROUTE}>Sign in</a>
                         </li>
                     }
                 </div>
