@@ -1,4 +1,6 @@
 @import "../abstracts/variables";
+@import "../utils/btn";
+
 
 .product {
   perspective: 150rem;
@@ -34,7 +36,9 @@
   }
 
   &__picture {
-    height: $picture-height;
+    min-height: 100%;
+    width: 50%;
+
   }
 
   &__heading {
@@ -76,7 +80,6 @@
   &__weightinput {
     font-size: 1.9rem;
     text-transform: uppercase;
-    display : box;
   }
 
   &__submit {

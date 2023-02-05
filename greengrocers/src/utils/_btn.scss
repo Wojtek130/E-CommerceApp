@@ -1,0 +1,72 @@
+@import "../abstracts/variables";
+
+
+.btn {
+
+    &, &:link,
+    &:visited {
+      /*visited state the same as link state*/
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all 0.2s; /*applied to all states of the button*/
+        position: relative;
+        font-size:  1.6rem;
+  
+        //changes for the <button>
+        border: none;
+        cursor: pointer;
+      }
+    
+      &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba(black, 0.2);
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6rem); /*the reference point is the first parent element with transform*/
+          opacity: 0;
+        }
+      }
+    
+      &:active, &:focs {
+        /*on click*/
+        transform: translateY(-.1rem); /*the reference point is the link state*/
+        box-shadow: 0 .5rem 1rem rgba(black, 0.2);
+      }
+    
+      &--white {
+        background-color: white;
+        color:  #777;
+        &::after {
+          background-color: white;
+        }
+      }
+  
+      &--green {
+        background-color: $green-darker;
+        color: white;
+        &::after {
+          background-color: $green-darker;
+        }
+      }
+    
+      &::after {
+        content: ""; /*must-have*/
+        display: inline-block; /*must-have*/
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute; /*the reference point is the first parent element with position set to relative*/
+        top: 0;
+        left: 0;
+        z-index: -1; /*making the behind efect*/
+        transition: all .4s;
+      }
+    
+    
+      &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards; /*set the style of an element before to animation to the style of 0% of the animation*/
+      }
+    }
