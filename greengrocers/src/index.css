@@ -9,6 +9,10 @@
 html {
   font-size: 62.5%;
   font-family: sans-serif;
+  /* background-repeat: no-repeat, repeat;
+  background-image: url("./assets/background.jpg"), url("./assets/green.jpg");
+  background-blend-mode:screen; */
+  background: url("./assets/background2.jpg");
 }
 
 body {

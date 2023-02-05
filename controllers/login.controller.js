@@ -27,7 +27,7 @@ const login = async function (req, res) {
           httpOnly: true,
         })
         .status(200)
-        .json({ message: "Logged in successfully 😊 👌" });
+        .json({ message: "Logged in successfully 😊👌" });
     } else {
       res.status(400).send("Invalid Credentials");
     }
@@ -41,7 +41,7 @@ const logout = async function (req, res) {
     return res
       .clearCookie("access_token")
       .status(200)
-      .json({ message: "Successfully logged out 😏 🍀" });
+      .json({ message: "Successfully logged out 😏🍀" });
   } catch (err) {
     console.log(err);
   }
@@ -67,7 +67,7 @@ const register = async function (req, res) {
       role: false,
     };
     await createUser(userInfo);
-    await res.status(200).json({ message: "Successfully registrated 😏 🍀" });
+    await res.status(200).json({ message: "Successfully registrated 😏🍀" });
   } catch (err) {
     console.log(err);
   }

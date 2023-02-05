@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter.component";
 import NavBar from "./components/NavBar.component";
 //import { observer } from "mobx-react-lite"
-//import "./App.css";
 
 const App = () => {
   // const [data, setData] = React.useState(null);
