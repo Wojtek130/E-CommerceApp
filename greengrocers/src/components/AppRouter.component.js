@@ -1,5 +1,5 @@
 import React from "react";
-import "./NavBar.component.scss";
+// import "./NavBar.component.css";
 import { LOGIN_ROUTE, SHOP_ROUTE, CART_ROUTE, LOGOUT_ROUTE, REGISTRATION_ROUTE, ADMIN_ROUTE } from "../utils/paths.util";
 import { Route, Routes, Navigate } from 'react-router-dom';
 import Cart from "../pages/Cart/Cart";

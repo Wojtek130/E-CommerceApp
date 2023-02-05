@@ -1,0 +1,39 @@
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background-color: #4C9A2A;
+    margin-top: 0%;
+  }
+  
+  .navigation__link {
+    font-family: "Cairo, sans-serif";
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+  }
+  
+  .navigation__link:hover {
+    transform: scale(2);
+    color: #006400;
+  }
+  
+  .navigation__item_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .navigation__logo {
+    justify-self: left;
+  }
+  
+  ul li {
+    margin-right: 50px;
+  }
+  
+  ul li:last-child {
+    margin-right: 80px;
+  }
+  
