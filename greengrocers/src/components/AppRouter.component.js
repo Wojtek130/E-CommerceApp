@@ -26,7 +26,6 @@ const AppRouter = () => {
             <Route key={ADMIN_ROUTE} path={ADMIN_ROUTE} element={<Admin />} exact />
             <Route key={SHOP_ROUTE} path={SHOP_ROUTE} element={<Home />} exact />
             <Route path="*" element={<Navigate to={SHOP_ROUTE} />}/>
-            {/* <Navigate to={SHOP_ROUTE} /> */}
         </Routes>
     );
 };

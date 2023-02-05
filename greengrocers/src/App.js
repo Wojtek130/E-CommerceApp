@@ -23,12 +23,10 @@ const App = () => {
   //   </div>
   // );
   return (
-    <div>
       <BrowserRouter>
         <NavBar />
         <AppRouter />
       </BrowserRouter>
-    </div >
   );
 };
 
