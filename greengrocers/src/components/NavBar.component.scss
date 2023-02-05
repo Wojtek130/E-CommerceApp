@@ -36,6 +36,9 @@ $hover-color: #006400;
 .navigation__logo {
     justify-self: left;
     margin-left: 4%;
+    &:hover{
+        cursor: pointer;
+    }
 }
 
 ul li {
