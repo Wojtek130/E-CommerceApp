@@ -2,13 +2,11 @@ $primary-color: #cefad0;
 
 body {
     font-size: 3rem;
-    background: $primary-color;
 }
 
 .form__wrapper{
     border-radius: 7%;
     border-style: solid;
-    
     border-color: green;
     display: flex;
     align-items: center;
@@ -25,7 +23,7 @@ body {
 .registration_form__message {
     align-content: center;
     margin-bottom: 3rem;
-    color: gray;
+    color: black;
     font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
