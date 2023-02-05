@@ -1,0 +1,37 @@
+.filters {
+  &__form {
+    background-color: lightgreen;
+
+    &__type {
+      background: yellow;
+
+      &__label {
+        background: pink;
+      }
+
+      &__radio {
+        background: pink;
+      }
+    }
+
+    &__tags {
+      background: blue;
+
+      &__label {
+        background: pink;
+      }
+
+      &__checkbox {
+        background: pink;
+      }
+    }
+
+    &__name {
+        background: yellowgreen;
+
+        &__search {
+            color: darkgreen;
+        }
+    }
+  }
+}

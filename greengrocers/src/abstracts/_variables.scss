@@ -1,8 +1,13 @@
 // $primary-color: #4C9A2A;
 $green-brighter : #55c57a;
-$color-darker : #28b485;
-$primary-gradient: -webkit-gradient(to right bottom,  $green-brighter, $color-darker);
-$primary-gradient: linear-gradient(to right bottom,  $green-brighter, $color-darker);
+$green-darker : #28b485;
+$primary-gradient: -webkit-gradient(to right bottom,  $green-brighter, $green-darker);
+$primary-gradient: linear-gradient(to right bottom,  $green-brighter, $green-darker);
+$color-grey-light-2: #eee;
+$product-height: 25rem;
+$picture-height: 25rem;
 
 $hover-color: #006400;
+
+
 

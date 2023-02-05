@@ -48,6 +48,7 @@ const logout = async function (req, res) {
 };
 
 const register = async function (req, res) {
+  // POST request body type json: { "username" : "bobr", "email" : "bobr@mail.com", "password" : "bobr"}
   try {
     console.log(req.body);
     const { username, email, password } = req.body;
