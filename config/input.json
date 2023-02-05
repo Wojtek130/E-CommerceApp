@@ -202,6 +202,18 @@
     "isFruit" : false,
     "price" : 1,
     "tags": []
+  },
+  "brussel_sprouts": {
+    "path" : "../greengrocers/src/assets/brussel_sproutes.jpg",
+    "isFruit" : false,
+    "price" : 2.1,
+    "tags": []
+  },
+  "coconut": {
+    "path" : "../greengrocers/src/assets/coconut.jpg",
+    "isFruit" : true,
+    "price" : 4.2,
+    "tags": ["exotic"]
   }
 }
 
