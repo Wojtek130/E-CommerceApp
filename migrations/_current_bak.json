@@ -28,12 +28,12 @@
                     "field": "password",
                     "seqType": "Sequelize.STRING"
                 },
-                "role": {
+                "isAdmin": {
                     "defaultValue": {
                         "value": false
                     },
                     "allowNull": false,
-                    "field": "role",
+                    "field": "isAdmin",
                     "seqType": "Sequelize.BOOLEAN"
                 },
                 "token": {
@@ -241,5 +241,5 @@
             "indexes": []
         }
     },
-    "revision": 2
+    "revision": 3
 }

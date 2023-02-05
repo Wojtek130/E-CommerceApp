@@ -28,7 +28,6 @@ module.exports = function (sequelize) {
       defaultValue: false,
       allowNull: false,
     },
-    token: { type: DataTypes.STRING },
   });
   User.attributes = User.rawAttributes;
   // User.associate = function (models) {

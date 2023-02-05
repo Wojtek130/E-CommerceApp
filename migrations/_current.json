@@ -36,10 +36,6 @@
                     "field": "isAdmin",
                     "seqType": "Sequelize.BOOLEAN"
                 },
-                "token": {
-                    "field": "token",
-                    "seqType": "Sequelize.STRING"
-                },
                 "createdAt": {
                     "allowNull": false,
                     "field": "createdAt",
@@ -241,5 +237,5 @@
             "indexes": []
         }
     },
-    "revision": 3
+    "revision": 4
 }

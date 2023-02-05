@@ -64,7 +64,6 @@ const register = async function (req, res) {
       email: email,
       password: encryptedPassword,
       role: false,
-      token: "",
     };
     await createUser(userInfo);
     await res.status(200).json({ message: "Successfully registrated 😏 🍀" });

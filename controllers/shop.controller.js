@@ -13,6 +13,7 @@ const AllProductsWithTags = async function (req, res) {
 };
 
 const completeOrder = async function (req, res) {
+  // orderedProducts = [{productId : 5, quantity : 3}, {productId : 6, quantity : 5}]
   const { userId, orderedProducts } = req.body;
   const fullOrderInfo = { userId: userId };
   const fullOrder = await createFullOrder(fullOrderInfo);
