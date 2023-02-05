@@ -1,0 +1,43 @@
+$font-stack: 'Cairo, sans-serif';
+// $primary-color: peachpuff;
+$primary-color: #F2C949;
+// $hover-color: peru;
+$hover-color: #C16512;
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    background-color: $primary-color;
+    margin-top: 0%;
+}
+
+.navigation__link {
+    font-family: $font-stack;
+    font-size: 1.7rem;
+    text-decoration: none;
+    color: white;
+
+    &:hover {
+        transform: scale(2);
+        color: $hover-color;
+    }
+}
+
+.navigation__item_wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navigation__logo {
+    justify-self: left;
+}
+
+ul li {
+    margin-right: 50px;
+    &:last-child {
+        margin-right: 80px;
+    }
+}
