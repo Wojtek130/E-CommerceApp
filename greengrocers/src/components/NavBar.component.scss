@@ -1,10 +1,10 @@
-$font-stack: 'Cairo, sans-serif';
+@import "../abstracts/variables";
+
 // $primary-color: peachpuff;
 // $primary-color: #F2C949;
-$primary-color: #4C9A2A;
+// $primary-color: #4C9A2A;
 // $hover-color: peru;
 // $hover-color: #C16512;
-$hover-color: #006400;
 
 .navigation {
     display: flex;
@@ -12,11 +12,11 @@ $hover-color: #006400;
     align-items: center;
     list-style-type: none;
     background-color: $primary-color;
-    margin-top: 0%;
+    margin-top: 0;
+    padding : 2rem;
 }
 
 .navigation__link {
-    font-family: $font-stack;
     font-size: 2.5rem;
     text-decoration: none;
     color: white;
