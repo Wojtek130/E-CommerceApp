@@ -1,0 +1,69 @@
+$primary-color: #cefad0;
+
+body {
+    font-size: 3rem;
+    background: $primary-color;
+}
+
+.form__wrapper{
+    border-radius: 7%;
+    border-style: solid;
+    
+    border-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // width: 60%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 3%;
+    height: 500px;
+    border-width: 0.6rem;
+}
+
+
+.registration_form__message {
+    align-content: center;
+    margin-bottom: 3rem;
+    color: gray;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.registration_form__label {
+    text-align: center;
+    // align-content: center;
+    display: block;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.registration_form__submit { 
+    border-radius: 2rem;
+    margin-left: 6.5rem;
+    width: 30rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+    &:hover{
+        cursor: pointer;
+        background-color: #0A6522;
+        color: white;
+    }
+}
+
+.registration_form__input {
+    border-radius: 1.2rem;
+    height: 3rem;
+    width: 100%;
+}
+
+.registration_form__login {
+    margin-top: 1rem;
+    display: block;
+    align-content: center;
+    font-size: 1.9rem;
+}
+
+.hide{
+    display: none;
+}
+
+
