@@ -1,10 +1,11 @@
 import React from "react";
-//import logo from "./logo.svg";
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
+import AppRouter from "./components/AppRouter.component";
 import NavBar from "./components/NavBar.component";
+//import { observer } from "mobx-react-lite"
 //import "./App.css";
 
-function App() {
+const App = () => {
   // const [data, setData] = React.useState(null);
 
   // React.useEffect(() => {
@@ -23,11 +24,12 @@ function App() {
   // );
   return (
     <div>
-      <NavBar/>
-      {/* <BrowserRouter>
-      </BrowserRouter> */}
-    </div>
+      <BrowserRouter>
+        <NavBar />
+        <AppRouter />
+      </BrowserRouter>
+    </div >
   );
-}
+};
 
 export default App;

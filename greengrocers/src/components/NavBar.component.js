@@ -5,7 +5,7 @@ import { LOGIN_ROUTE, SHOP_ROUTE, CART_ROUTE } from "../utils/paths.util";
 //import {NavLink} from "react-router-dom";
 
 function NavBar() {
-    const isAuth = false;
+    const isLoggedIn = false;
     return (
         <div>
             <ul className="navigation">
@@ -18,7 +18,7 @@ function NavBar() {
                     <li className="navigation__item">
                         <a className="navigation__link" href={CART_ROUTE}>Cart</a>
                     </li>
-                    {isAuth ?
+                    {isLoggedIn ?
                         <li className="navigation__item">
                             <a className="navigation__link" href={LOGIN_ROUTE}>Log out</a>
                         </li>
