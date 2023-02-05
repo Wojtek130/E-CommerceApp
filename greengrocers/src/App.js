@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter.component";
 import NavBar from "./components/NavBar.component";
 //import { observer } from "mobx-react-lite"
@@ -22,11 +22,12 @@ const App = () => {
   //     </header>
   //   </div>
   // );
+  // return <div>Hello2</div>;
   return (
-      <BrowserRouter>
-        <NavBar />
-        <AppRouter />
-      </BrowserRouter>
+    <BrowserRouter>
+      <NavBar />
+      <AppRouter />
+    </BrowserRouter>
   );
 };
 
