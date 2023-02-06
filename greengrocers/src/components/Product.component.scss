@@ -1,7 +1,6 @@
 @import "../abstracts/variables";
 @import "../utils/btn";
 
-
 .product {
   perspective: 150rem;
   --moz-perspective: 150rem;
@@ -15,12 +14,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 85%;
+    width: 100%;
     backface-visibility: hidden;
     border-radius: 3px;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
-    background-color: rgba(green, $alpha: .5);
+    background-color: rgba(green, $alpha: 0.5);
 
     &--back {
       transform: rotateY(180deg);
@@ -38,7 +37,6 @@
   &__picture {
     min-height: 100%;
     width: 50%;
-
   }
 
   &__heading {
@@ -52,13 +50,12 @@
     transform: translate(-50%, -50%);
   }
 
-
   &__cta {
     position: absolute;
     top: 50%;
     left: 50%; /*relates to the parent's width/hight*/
     transform: translate(-50%, -50%); /*relates to the element's width/hight*/
-    width: 90%;
+    width: 100%;
     text-align: center;
   }
 
@@ -85,6 +82,9 @@
   &__submit {
     font-size: 1.9rem;
     text-transform: uppercase;
+    display: block;
+    margin: auto;
+
   }
 
   &__price-value {
