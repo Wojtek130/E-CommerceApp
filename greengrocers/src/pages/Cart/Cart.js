@@ -1,9 +1,11 @@
 import React from 'react';
 import "./Cart.scss";
 import { useState } from 'react';
+import { useNavigate } from "react-router-dom";
 import CartComponent from '../../components/Cart.component';
 
 const Cart = () => {
+    const navigate = useNavigate();
     const path = '../../assets/'
     const json = [
         {
@@ -23,6 +25,7 @@ const Cart = () => {
     ]
 
     const [products, setProducts] = useState(json);
+    // const [prc, setPrc] = useState(0);
 
     const deleteClick = function (id) {
         const ind = products.findIndex((obj) => obj.productId == id);
@@ -32,6 +35,12 @@ const Cart = () => {
             return newProducts;
         });
     }
+
+    const order = function () {
+        alert("Successful order!");
+        navigate("/");
+    }
+
 
     return (
         <div className='cart__wrapper'>
@@ -55,18 +64,13 @@ const Cart = () => {
                             name={p.productName}
                             deleteClick={deleteClick}
                             price={p.productPrice}
-                            weight={p.productQuantity} />
+                            weight={p.productQuantity}
+                        />
                     ))}
-                    {/* <tr>
-                        <td><img className='cart__delete' onClick={() => deleteClick()} src={delete_icon}></img></td>
-                        <td className='cart__photo'><img src={strawberry}></img></td>
-                        <td className='cart__product'>Strawberry</td>
-                        <td className='cart__price'>5</td>
-                        <td className='cart__weight'><input className='dupa' type="number" min="0.1" step="0.1"></input></td>
-                        <td className='cart__fullprice'>6</td>
-                    </tr> */}
                 </tbody>
             </table>
+            {/* <p>{prc}</p> */}
+            <button className='btn order' onClick={order}>ORDER</button>
         </div>
     );
 };

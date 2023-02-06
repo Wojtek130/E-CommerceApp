@@ -9,14 +9,17 @@ const CartComponent = (props) => {
     const price = Number(props.price);
     const weight = Number(props.weight);
     const id = Number(props.id);
+    // const setPrc = props.setPrc;
     const [fullprice, setFullprice] = useState(price * weight);
     const changePrice = function(event){
-        setFullprice(Math.round(event.target.value * price * 100) / 100);
+        let val = Math.round(event.target.value * price * 100) / 100;
+        setFullprice(val);
+        // setPrc((p) => p + val)
     }
     return (
         <tr>
             <td><img className='cart__delete' onClick={() => deleteClick(id)} src={delete_icon}></img></td>
-            <td className='cart__photo'><img src={path}></img></td>
+            <td className='cart__photo'><img className='product_photo' src={path}></img></td>
             <td className='cart__product'>{name}</td>
             <td className='cart__price'>{price}</td>
             <td className='cart__weight'>
