@@ -1,6 +1,7 @@
 import "./Gallery.component.scss";
 import Product from "./Product.component";
 import React, { useEffect, useState } from "react";
+import ProductTags from "./ProductTags.component";
 
 const Gallery = () => {
   const [pictures, setPictures] = useState([]);
@@ -47,11 +48,43 @@ const Gallery = () => {
   // useEffect(() => {
   //   console.log("ready");
   // }, []);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const data = await fetch("http://localhost:3001/products");
+      const json = await data.json();
+      setPictures(
+        await json.map((productObj) => {
+          const productName = productObj["name"];
+          const productId = productObj["id"];
+          const productPrice = productObj["price"];
+          let productPath = productObj["photoPath"];
+          const productTags = productObj["tags"];
+          return (
+            <Product
+              key={productId}
+              productName={productName}
+              productId={productId}
+              productPrice={productPrice}
+              productPath={productPath}
+              productTags={productTags}
+            />
+          );
+        })
+      );
+    };
+    try {
+      fetchData();
+    } catch (error) {
+      console.error(error);
+    }
+  }, []);
+
   return (
     <section className="gallery">
       {pictures}
-      <Product photoPath="banana.jpg" />
-      <Product photoPath="onion.jpg" />
+      {/* <Product photoPath="banana.jpg" /> */}
+      {/* <Product photoPath="onion.jpg" /> */}
     </section>
   );
 };

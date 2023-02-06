@@ -42,7 +42,7 @@
   }
 
   &__heading {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 300;
     text-transform: uppercase;
     color: white;
@@ -50,7 +50,7 @@
     padding: 1rem;
     position: absolute;
     top: 50%;
-    left: 70%;
+    left: 75%;
     transform: translate(-50%, -50%);
   }
 
@@ -71,18 +71,17 @@
     }
   }
 
-  
   &__weightinput {
     font-size: 1.9rem;
     text-transform: uppercase;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: .5rem;
+    padding: 0.5rem;
     border-radius: 10px;
     border: none;
   }
-  
+
   &__submit {
     font-size: 1.9rem;
     text-transform: uppercase;
