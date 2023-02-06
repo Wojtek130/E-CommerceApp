@@ -15,7 +15,7 @@ const ProductTags = function (props) {
           const tagName = tagObj["name"];
           const tagId = tagObj["id"];
           return (
-            <ProductTagCheckbox value={tagName} tagId={tagId} key={tagId} />
+            <ProductTagCheckbox setTags={props.setTags} value={tagName} tagId={tagId} key={tagId} />
           );
         })
       );

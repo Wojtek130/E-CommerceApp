@@ -1,53 +1,9 @@
 import "./Gallery.component.scss";
 import Product from "./Product.component";
 import React, { useEffect, useState } from "react";
-import ProductTags from "./ProductTags.component";
 
-const Gallery = () => {
+const Gallery = (props) => {
   const [pictures, setPictures] = useState([]);
-
-  const files = [
-    "asparagus.jpg",
-    "avocado.jpg",
-    "banana.jpg",
-    "beets.jpg",
-    "bell_pepper.jpg",
-    "blackberry.jpg",
-    "blueberry.jpg",
-    "broccoli.jpg",
-    "brussel_sprouts.jpg",
-    "cabbage.jpg",
-    "carrot.jpg",
-    "cauliflower.jpg",
-    "celery.jpg",
-    "cherry.jpg",
-    "coconut.jpg",
-    "dragon_fruit.jpg",
-    "durian.jpg",
-    "garlic.jpg",
-    "grapefruit.jpg",
-    "green_peas.jpg",
-    "guava.jpg",
-    "lemon.jpg",
-    "lime.jpg",
-    "mango.jpg",
-    "onion.jpg",
-    "orange.jpg",
-    "pineapple.jpg",
-    "potato.jpg",
-    "soy_beans.jpg",
-    "spinach.jpg",
-    "strawberry.jpg",
-    "sweet_potato.jpg",
-    "tomato.jpg",
-  ];
-  useEffect(() => {
-    // setPictures(files);
-    setPictures(files.map((f) => <Product photoPath={f} key={f} />));
-  }, []);
-  // useEffect(() => {
-  //   console.log("ready");
-  // }, []);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,6 +16,27 @@ const Gallery = () => {
           const productPrice = productObj["price"];
           let productPath = productObj["photoPath"];
           const productTags = productObj["tags"];
+          const isFruit = productObj["isFruit"];
+          const type = isFruit ? "fruit" : "vegetable";
+          if (props.type !== "all" && props.type !== type) {
+            return<></>;
+          }
+          if (props.name && !productName.startsWith(props.name))  {
+            return<></>;
+          }
+          // console.log(props.tags);
+          let matchingTag = false;
+          if (props.tags.length > 0) {
+            // console.log("si");
+            productTags.forEach(t => {
+              if (props.tags.includes(t)) {
+                matchingTag = true;
+              }
+            });
+            if (!matchingTag) {
+              return<></>;
+            }
+          }
           return (
             <Product
               key={productId}
@@ -78,7 +55,7 @@ const Gallery = () => {
     } catch (error) {
       console.error(error);
     }
-  }, []);
+  }, [props.type, props.tags, props.name]);
 
   return (
     <section className="gallery">

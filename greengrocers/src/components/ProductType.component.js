@@ -4,9 +4,9 @@ const ProductType = function (props) {
 
   return (
     <div className="filters__form__type">
-      <ProductTypeRadio value="all" />
-      <ProductTypeRadio value="fruit" />
-      <ProductTypeRadio value="vegetable" />
+      <ProductTypeRadio setType={props.setType} value="all" />
+      <ProductTypeRadio setType={props.setType} value="fruit" />
+      <ProductTypeRadio setType={props.setType} value="vegetable" />
     </div>
   );
 };

@@ -1,8 +1,6 @@
 import "./Product.component.scss";
 
 const Product = function (props) {
-  let p = "banana";
-  const pa = "../assets/" + p + ".jpg";
   return (
     <div className="product">
       <div className="product__side product__side--front">
