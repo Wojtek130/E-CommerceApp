@@ -38,7 +38,7 @@ const Cart = () => {
 
     const order = function () {
         alert("Successful order!");
-        navigate("/");
+        navigate("/login");
     }
 
 
