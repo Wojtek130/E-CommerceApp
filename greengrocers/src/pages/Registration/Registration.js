@@ -17,6 +17,9 @@ const Registration = () => {
         setPassword(event.target.value);
     };
     const handleUsername = (event) => {
+        // if (!event.target.value.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
+        //     event.target.setCustomValidity('Username contains only letters and has no spaces');
+        // }
         setUsername(event.target.value);
     };
 
@@ -53,6 +56,8 @@ const Registration = () => {
                     text="Username"
                     id='username'
                     type='text'
+                    pattern='^[a-zA-Z0-9]*$'
+                    title='Username must contain only letters and digits and no spaces'
                     value={username}
                     onChange={handleUsername} />
                 <Input
@@ -60,7 +65,7 @@ const Registration = () => {
                     className2='registration_form__label'
                     text="Email"
                     id='email'
-                    type='text'
+                    type='email'
                     value={email}
                     onChange={handleEmail} />
                 <Input
@@ -69,6 +74,8 @@ const Registration = () => {
                     text="Password"
                     id='password'
                     type='password'
+                    minlength="4" 
+                    title="Password min length is 4"
                     value={password}
                     onChange={handlePassword} />
                 <p className='registration_form__login'>Already have an account? <a href="/login">Log in</a></p>
