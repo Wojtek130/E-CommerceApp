@@ -56,8 +56,11 @@ const register = async function (req, res) {
     if (!(email && password && username)) {
       return res.status(400).send("All input is required");
     }
-    if ((await getUserByUserame(username)) || (await getUserByEmail(email))) {
-      return res.status(409).send("User Already Exist. Please Login");
+    if (await getUserByUserame(username)) {
+      return res.status(409).send("User with this username already exists. Please Login");
+    }
+    if (await getUserByEmail(email)) {
+      return res.status(409).send("User with this email already exists. Please Login");
     }
     encryptedPassword = await bcrypt.hash(password, 10);
     const userInfo = {

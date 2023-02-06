@@ -6,6 +6,7 @@ const loginController = require("../controllers/login.controller");
 const auth = require("../middlewares/auth.middleware");
 
 router.get("/products", shopController.AllProductsWithTags);
+router.get("/tags", shopController.AllTags);
 router.get("/api", shopController.helloFun);
 router.post("/login", loginController.login);
 router.post("/register", loginController.register);

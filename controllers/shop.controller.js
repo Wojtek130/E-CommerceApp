@@ -1,5 +1,6 @@
 const {
   getProductWithTags,
+  getTags,
   createSingleOrder,
   createFullOrder,
 } = require("../services/shop.service");
@@ -11,6 +12,12 @@ const helloFun = function (req, res) {
 const AllProductsWithTags = async function (req, res) {
   const out = await getProductWithTags();
   res.json(out);
+};
+
+const AllTags = async function (req, res) {
+  const out = await getTags();
+  res.json(out);
+  return out;
 };
 
 const completeOrder = async function (req, res) {
@@ -35,4 +42,5 @@ module.exports = {
   helloFun,
   AllProductsWithTags,
   completeOrder,
+  AllTags,
 };

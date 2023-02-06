@@ -44,8 +44,7 @@
       display: grid;
       grid-template-columns: 1fr;
 
-      &__radiolabel {
-      }
+      font-size: 1.9rem;
 
       &__label {
         @include labelStl;
