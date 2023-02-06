@@ -11,7 +11,7 @@ const Filters = () => {
           <ProductType />
           <ProductTags />
           <ProductName />
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Submit" className="btn" />
         </form>
       </section>
     </>

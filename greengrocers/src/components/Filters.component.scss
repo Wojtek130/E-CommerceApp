@@ -6,6 +6,9 @@
   background: $primary-gradient;
   // margin-bottom: 10rem;
   &__form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     // background-color: lightgreen;
 
     &__type {
@@ -33,11 +36,11 @@
     }
 
     &__name {
-        // background: yellowgreen;
+      // background: yellowgreen;
 
-        &__search {
-            // color: darkgreen;
-        }
+      &__search {
+        // color: darkgreen;
+      }
     }
   }
 }
