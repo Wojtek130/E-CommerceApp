@@ -14,7 +14,6 @@ const Filters = () => {
           <input type="submit" value="Submit" />
         </form>
       </section>
-      <section className="gallery"> aaa</section>
     </>
   );
 };

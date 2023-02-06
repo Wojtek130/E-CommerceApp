@@ -9,11 +9,13 @@ const Home = () => {
     // <div className="brand">
     //     Home
     // </div>
-    <div className="home_wrapper">
+    <>
       <MainHeader />
       <Filters />
+    <div className="home_wrapper">
       <Gallery />
     </div>
+    </>
   );
 };
 

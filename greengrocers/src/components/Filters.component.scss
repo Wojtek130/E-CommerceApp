@@ -1,36 +1,42 @@
+@import "../abstracts/variables";
+
 .filters {
+  padding: 2rem 2rem;
+  margin-bottom: 5rem;
+  background: $primary-gradient;
+  // margin-bottom: 10rem;
   &__form {
-    background-color: lightgreen;
+    // background-color: lightgreen;
 
     &__type {
-      background: yellow;
+      // background: yellow;
 
       &__label {
-        background: pink;
+        // background: pink;
       }
 
       &__radio {
-        background: pink;
+        // background: pink;
       }
     }
 
     &__tags {
-      background: blue;
+      // background: blue;
 
       &__label {
-        background: pink;
+        // background: pink;
       }
 
       &__checkbox {
-        background: pink;
+        // background: pink;
       }
     }
 
     &__name {
-        background: yellowgreen;
+        // background: yellowgreen;
 
         &__search {
-            color: darkgreen;
+            // color: darkgreen;
         }
     }
   }
