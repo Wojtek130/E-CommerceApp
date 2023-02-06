@@ -19,7 +19,6 @@ const ProductTags = function (props) {
         const tagName = tagObj["name"];
         const tagId = tagObj["id"];
         return <ProductTagCheckbox value={tagName} tagId={tagId} key={tagId} />}));
-      console.log(json);
       // set state with the result
       // setData(json);
     };
