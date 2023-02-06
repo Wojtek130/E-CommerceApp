@@ -17,9 +17,6 @@ const Registration = () => {
         setPassword(event.target.value);
     };
     const handleUsername = (event) => {
-        // if (!event.target.value.match(/^[a-zA-Z]+ [a-zA-Z]+$/)) {
-        //     event.target.setCustomValidity('Username contains only letters and has no spaces');
-        // }
         setUsername(event.target.value);
     };
 
@@ -40,7 +37,7 @@ const Registration = () => {
         })
             .then((response) => response.json())
             .then((result) => {
-                console.log(result);
+                // console.log(result);
                 setHide(!hide);
                 setMessage(result.message);
             })
@@ -81,7 +78,7 @@ const Registration = () => {
                 <p className='registration_form__login'>Already have an account? <a href="/login">Log in</a></p>
                 <input className='registration_form__submit btn' type="submit" value="Submit" />
             </form>
-            <p className={hide ? "hide" : undefined}>{message}. <br /> Go to <a href="/login">login page?</a></p>
+            <p className={hide ? "hide" : undefined}>{message}<br /> Go to <a href="/login">login page?</a></p>
         </div>
     );
 };

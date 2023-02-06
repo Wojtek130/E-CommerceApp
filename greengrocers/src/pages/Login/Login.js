@@ -8,6 +8,7 @@ const Login = () => {
     const [message, setMessage] = React.useState('');
     const [hide, setHide] = React.useState(true);
     const responseBody = {};
+    let loggedIn = message.includes("successfully");
 
     const handlePassword = (event) => {
         setPassword(event.target.value);
@@ -31,7 +32,7 @@ const Login = () => {
         })
             .then((response) => response.json())
             .then((result) => {
-                console.log(result);
+                // console.log(result);
                 setHide(!hide);
                 setMessage(result.message);
             })
@@ -60,7 +61,13 @@ const Login = () => {
                 <p className='login_form__login'>Don't have an account? <a href="/register">Register</a></p>
                 <input className='login_form__submit btn' type="submit" value="Submit" />
             </form>
-            <p className={hide ? "hide" : undefined}>{message}. <br /> Go to <a href="/">home page?</a></p>
+            <p className={hide ? "hide" : undefined}>
+                {message}
+                {loggedIn ?
+                    <p>Go to <a href="/">home page?</a></p>
+                    :
+                    <a href="/login">Try again?</a>}
+            </p>
         </div>
     );
 };

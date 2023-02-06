@@ -29,7 +29,7 @@ const login = async function (req, res) {
         .status(200)
         .json({ message: "Logged in successfully 😊👌" });
     } else {
-      res.status(400).send("Invalid Credentials");
+      res.status(400).json({ message: "Invalid Credentials." });
     }
   } catch (err) {
     console.log(err);
@@ -57,10 +57,10 @@ const register = async function (req, res) {
       return res.status(400).send("All input is required");
     }
     if (await getUserByUserame(username)) {
-      return res.status(409).send("User with this username already exists. Please Login");
+      return res.status(409).json({ message: "User with this username already exists." });
     }
     if (await getUserByEmail(email)) {
-      return res.status(409).send("User with this email already exists. Please Login");
+      return res.status(409).json({ message: "User with this email already exists." });
     }
     encryptedPassword = await bcrypt.hash(password, 10);
     const userInfo = {
@@ -70,7 +70,7 @@ const register = async function (req, res) {
       role: false,
     };
     await createUser(userInfo);
-    await res.status(200).json({ message: "Successfully registrated 😏🍀" });
+    await res.status(200).json({ message: "Successfully registrated 😏🍀." });
   } catch (err) {
     console.log(err);
   }
