@@ -21,23 +21,22 @@ body {
 }
 
 
-.registration_form__message {
+.login_form__message {
     align-content: center;
     margin-bottom: 3rem;
     color: black;
     font-family: $font;
 }
 
-.registration_form__label {
+.login_form__label {
     text-align: center;
     align-content: center;
     display: block;
     font-family: $font;
 }
 
-.registration_form__submit { 
+.login_form__submit { 
     border-radius: 2rem;
-    margin-left: 6.5rem;
     width: 30rem;
     margin-top: 3rem;
     font-size: 3rem;
@@ -48,20 +47,20 @@ body {
     }
 }
 
-.registration_form__input {
+.login_form__input {
     border-radius: 1.2rem;
     height: 3rem;
     width: 100%;
 }
 
-.registration_form__login {
+.login_form__login {
     margin-top: 1rem;
     display: block;
     align-content: center;
     font-size: 1.9rem;
 }
 
-.hide{
+.hide {
     display: none;
 }
 
