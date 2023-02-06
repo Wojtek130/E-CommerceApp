@@ -1,7 +1,10 @@
 import "./Gallery.component.scss";
 import Product from "./Product.component";
+import React, { useEffect, useState } from "react";
 
 const Gallery = () => {
+  const [pictures, setPictures] = useState([]);
+
   const files = [
     "asparagus.jpg",
     "avocado.jpg",
@@ -37,10 +40,16 @@ const Gallery = () => {
     "sweet_potato.jpg",
     "tomato.jpg",
   ];
-  const listItems = files.map((f) =><Product photoPath={f} /> );
+  useEffect(() => {
+    // setPictures(files);
+    setPictures(files.map((f) => <Product photoPath={f} key={f} />));
+  }, []);
+  // useEffect(() => {
+  //   console.log("ready");
+  // }, []);
   return (
     <section className="gallery">
-      {listItems}
+      {pictures}
       <Product photoPath="banana.jpg" />
       <Product photoPath="onion.jpg" />
     </section>

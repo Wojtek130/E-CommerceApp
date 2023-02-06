@@ -16,7 +16,7 @@ const Product = function (props) {
           {/* <div className="product__price-box"> */}
             <form className="product__backform">
               <p className="product__price-value">$155</p>
-              <label className="product__weight" for="weight">
+              <label className="product__weight" htmlFor="weight">
                 Weight:
               </label>
               <input

@@ -12,9 +12,7 @@ const Home = () => {
     <>
       <MainHeader />
       <Filters />
-    <div className="home_wrapper">
       <Gallery />
-    </div>
     </>
   );
 };

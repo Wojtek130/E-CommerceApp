@@ -9,7 +9,7 @@ const ProductTagsCheckbox = function (props) {
         value={props.value}
         className="filters__form__tags__radio"
       />
-      <label for={props.value} className="filters__form__tags__label">
+      <label htmlFor={props.value} className="filters__form__tags__label">
         {props.value}{" "}
       </label>
       {/* </> */}
