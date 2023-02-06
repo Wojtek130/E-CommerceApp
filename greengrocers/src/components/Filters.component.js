@@ -8,10 +8,12 @@ const Filters = () => {
     <>
       <section className="filters">
         <form className="filters__form">
+        <img className="filters__form__logo" src={require(`../assets/logo2.png`)} alt=""  />
+
           <ProductType />
           <ProductTags />
           <ProductName />
-          <input type="submit" value="Submit" className="btn" />
+          <input type="submit" value="Apply filters" className="btn filters__form__button" />
         </form>
       </section>
     </>

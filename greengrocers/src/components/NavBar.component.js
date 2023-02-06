@@ -11,7 +11,7 @@ function NavBar() {
 return (
     <div>
         <ul className="navigation">
-            <img className="navigation__logo" onClick={() => navigate("/")} src={logo} alt="" width="110" height="100" />
+            <img className="navigation__logo" onClick={() => navigate("/")} src={logo} alt=""  />
 
             <div className="navigation__item_wrapper">
                 <li className="navigation__item">

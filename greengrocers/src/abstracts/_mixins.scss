@@ -12,3 +12,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+@mixin labelStl {
+    vertical-align: middle;
+    color: white;
+    margin-left: .5rem;
+}

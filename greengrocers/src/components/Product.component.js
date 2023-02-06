@@ -12,10 +12,9 @@ const Product = function (props) {
         <h4 className="product__heading">Apple</h4>
       </div>
       <div className="product__side product__side--back">
-        <div className="product__cta">
-          <div className="product__price-box">
-            <form>
-              <p className="product__price-only">Only</p>
+        {/* <div className="product__cta"> */}
+          {/* <div className="product__price-box"> */}
+            <form className="product__backform">
               <p className="product__price-value">$155</p>
               <label className="product__weight" for="weight">
                 Weight:
@@ -34,8 +33,8 @@ const Product = function (props) {
                 className="btn btn--white product__submit"
               />
             </form>
-          </div>
-        </div>
+          {/* </div> */}
+        {/* </div> */}
       </div>
     </div>
   );

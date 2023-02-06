@@ -16,13 +16,12 @@
     left: 0;
     width: 100%;
     backface-visibility: hidden;
-    border-radius: 3px;
+    border-radius: $border-radius;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
     // background-color: rgba(green, $alpha: 0.5);
     background-color: rgba(white, $alpha: 0.6);
     border-radius: 5px;
-
 
     &--back {
       transform: rotateY(180deg);
@@ -55,45 +54,49 @@
     transform: translate(-50%, -50%);
   }
 
-  &__cta {
+  &__backform {
     position: absolute;
     top: 50%;
     left: 50%; /*relates to the parent's width/hight*/
     transform: translate(-50%, -50%); /*relates to the element's width/hight*/
     width: 100%;
     text-align: center;
-  }
-
-  &__price-box {
-    text-align: center;
+    display: flex;
+    flex-direction: column;
     color: white;
+    justify-content: space-between;
+    // align-items: stretch;
+    & * {
+      margin: 0 0 2rem 0;
+    }
   }
 
-  &__price-only {
-    font-size: 1.4rem;
-    text-transform: uppercase;
-  }
-
-  &__weight {
-    font-size: 1.9rem;
-    text-transform: uppercase;
-  }
-
+  
   &__weightinput {
     font-size: 1.9rem;
     text-transform: uppercase;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5rem;
+    border-radius: 10px;
+    border: none;
   }
-
+  
   &__submit {
     font-size: 1.9rem;
     text-transform: uppercase;
     display: block;
     margin: auto;
-
   }
 
   &__price-value {
-    font-size: 6rem;
-    font-weight: 100;
+    font-size: 3rem;
+    // font-weight: 100;
+  }
+
+  &__weight {
+    font-size: 3rem;
+    // text-transform: uppercase;
   }
 }
