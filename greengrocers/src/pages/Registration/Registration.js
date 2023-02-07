@@ -2,6 +2,8 @@ import * as React from "react";
 import "./Registration.scss";
 import Input from "../../components/Input.component";
 
+
+
 const Registration = () => {
   const [username, setUsername] = React.useState("");
   const [email, setEmail] = React.useState("");
