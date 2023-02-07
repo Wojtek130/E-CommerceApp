@@ -11,20 +11,20 @@ import Admin from "../pages/Admin/Admin"
 //import { observer } from "mobx-react-lite";
 
 
-const AppRouter = () => {
-    const isLoggedIn = true;
+const AppRouter = (props) => {
+    const isLoggedInMock = true;
     return (
         <Routes>
             {
-                isLoggedIn ?
+                isLoggedInMock ?
                     <Route key={LOGIN_ROUTE} path={LOGIN_ROUTE} element={<Login />} exact />
                     :
                     <Route key={LOGOUT_ROUTE} path={LOGOUT_ROUTE} element={<Logout />} exact />
             }
             <Route key={REGISTRATION_ROUTE} path={REGISTRATION_ROUTE} element={<Registration />} exact />
-            <Route key={CART_ROUTE} path={CART_ROUTE} element={<Cart />} exact />
+            <Route key={CART_ROUTE} path={CART_ROUTE} element={<Cart setCart={props.setCart} cart={props.cart} />} exact />
             <Route key={ADMIN_ROUTE} path={ADMIN_ROUTE} element={<Admin />} exact />
-            <Route key={SHOP_ROUTE} path={SHOP_ROUTE} element={<Home />} exact />
+            <Route key={SHOP_ROUTE} path={SHOP_ROUTE} element={<Home setCart={props.setCart}  />} exact />
             <Route path="*" element={<Navigate to={SHOP_ROUTE} />}/>
         </Routes>
     );

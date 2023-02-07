@@ -1,6 +1,21 @@
 import "./Product.component.scss";
+import { appendToCookie, getSetCookie } from "../utils/cookies.utils";
+import Cookies from "js-cookie";
 
 const Product = function (props) {
+  const handleAddToCart = async function (e) {
+    e.preventDefault();
+    const currentProduct = {
+      productId: props.productId,
+      productName: props.productName,
+      productQuantity: props.productPrice,
+      productPath: props.productPath,
+      productPrice: props.productPrice,
+    };
+    props.setCart((prevCart) => [...prevCart, currentProduct]);
+    await appendToCookie("cart", currentProduct);
+    console.log(Cookies.get("cart"), "aaaa");
+  };
   return (
     <div className="product">
       <div className="product__side product__side--front">
@@ -21,14 +36,15 @@ const Product = function (props) {
             type="number"
             id="weight"
             name="weight"
-            min=".1"
-            max="100"
+            // min=".1"
+            // max="100"
             className="product__weightinput"
           ></input>
           <input
             type="submit"
             value="Add to cart"
             className="btn btn--white product__submit"
+            onClick={handleAddToCart}
           />
         </form>
         {/* </div> */}

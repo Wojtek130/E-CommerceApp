@@ -45,6 +45,7 @@ const Gallery = (props) => {
               productPrice={productPrice}
               productPath={productPath}
               productTags={productTags}
+              setCart={props.setCart} 
             />
           );
         })

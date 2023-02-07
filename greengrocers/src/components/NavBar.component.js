@@ -10,7 +10,7 @@ import {
 import { useNavigate } from "react-router-dom";
 
 function NavBar() {
-  const isLoggedIn = false;
+  const isLoggedInMock = false;
   let navigate = useNavigate();
 
   const handleLogout = async (e) => {
@@ -51,7 +51,7 @@ function NavBar() {
               Registration
             </a>
           </li>
-          {isLoggedIn ? (
+          {isLoggedInMock ? (
             <li className="navigation__item">
               <a
                 className="navigation__link"

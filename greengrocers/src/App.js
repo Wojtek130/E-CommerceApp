@@ -3,18 +3,13 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter.component";
 import NavBar from "./components/NavBar.component";
 import { useEffect, useState } from "react";
-
-//import { observer } from "mobx-react-lite"
-function getCookie(name) {
-  const value = `; ${document.cookie}`;
-  const parts = value.split(`; ${name}=`);
-  if (parts.length === 2) return parts.pop().split(';').shift();
-}
+import { getSetCookie } from "./utils/cookies.utils";
 
 const App = () => {
   const [isLoggedIn, setisLoggedIn] = useState(false);
-  
-  console.log(getCookie("access-token"), "!!!!!!");
+  const [cart, setCart] = useState([]);
+  console.log(cart, "AS");
+  // console.log(getCookie("access-token"), "!!!!!!");
   // const [data, setData] = React.useState(null);
 
   // React.useEffect(() => {
@@ -35,7 +30,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <NavBar />
-      <AppRouter />
+      <AppRouter cart={cart} setCart={setCart} />
     </BrowserRouter>
   );
 };

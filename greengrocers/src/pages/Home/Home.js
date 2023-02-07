@@ -6,7 +6,7 @@ import "./Home.scss";
 import {useState} from "react";
 
 
-const Home = () => {
+const Home = (props) => {
   const [type, setType] = useState("all");
   const [tags, setTags] = useState([]);
   const [name, setName] = useState("");
@@ -18,7 +18,7 @@ const Home = () => {
     <>
       <MainHeader />
       <Filters setType={setType} setTags={setTags} setName={setName} />
-      <Gallery type={type} tags={tags} name={name} />
+      <Gallery type={type} tags={tags} name={name} setCart={props.setCart} />
     </>
   );
 };
