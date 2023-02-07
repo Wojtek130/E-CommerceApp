@@ -24,18 +24,26 @@ const Login = () => {
     setUsername("");
     setPassword("");
     try {
-        const response = await fetch("http://localhost:3001/login", {
-          method: "POST",
-          headers: {
-            "Content-type": "application/json",
-          },
-          body: JSON.stringify(responseBody),
-        })
-        const result = await response.json();
-        setHide(!hide);
-        setMessage(result.message)
+      const response = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(responseBody),
+      });
+      // response.headers.forEach(console.log);
+      for (let entry of response.headers.entries()) {
+        console.log(entry);
+      }
+
+
+      const result = await response.json();
+      document.cookie = `access-token=${result.token}`;
+      console.log(result.token, "!!");
+      setHide(!hide);
+      setMessage(result.message);
     } catch (error) {
-        console.error(error);
+      console.error(error);
     }
   };
 

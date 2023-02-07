@@ -16,7 +16,11 @@ const login = async function (req, res) {
     const user = await getUserByUserame(username);
     if (user && (await bcrypt.compare(password, user.password))) {
       const token = await jwt.sign(
-        { userId: user.dataValues.id, username: username },
+        {
+          userId: user.dataValues.id,
+          username: username,
+          isAdmin: user.dataValues.isAdmin,
+        },
         process.env.TOKEN_KEY,
         {
           expiresIn: "2h",
@@ -26,8 +30,8 @@ const login = async function (req, res) {
         .cookie("access_token", token, {
           httpOnly: true,
         })
-        .status(200)
-        .json({ message: "Logged in successfully 😊👌" });
+        .status(201)
+        .json({ message: "Logged in successfully 😊👌", token: token });
     } else {
       res.status(400).json({ message: "Invalid Credentials." });
     }
@@ -57,10 +61,14 @@ const register = async function (req, res) {
       return res.status(400).send("All input is required");
     }
     if (await getUserByUserame(username)) {
-      return res.status(409).json({ message: "User with this username already exists." });
+      return res
+        .status(409)
+        .json({ message: "User with this username already exists." });
     }
     if (await getUserByEmail(email)) {
-      return res.status(409).json({ message: "User with this email already exists." });
+      return res
+        .status(409)
+        .json({ message: "User with this email already exists." });
     }
     encryptedPassword = await bcrypt.hash(password, 10);
     const userInfo = {

@@ -12,8 +12,10 @@ const verifyToken = (req, res, next) => {
     const data = jwt.verify(token, config.TOKEN_KEY);
     console.log(data);
     console.log(data.userId);
+    console.log(data.isAdmin);
     req.userId = data.userId;
     req.userUsername = data.username;
+    req.isAdmin = data.isAdmin;
   } catch (err) {
     return res.status(401).send("Invalid Token");
   }
