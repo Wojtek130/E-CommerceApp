@@ -7,6 +7,8 @@ import {
   appendToCookie,
   getSetCookie,
   setCookieValue,
+  loginCookieExists,
+  deleteCartCookie,
 } from "../../utils/cookies.utils";
 
 const Cart = (props) => {
@@ -41,8 +43,13 @@ const Cart = (props) => {
   };
 
   const order = function () {
-    alert("Successful order!");
-    navigate("/login");
+    if (loginCookieExists()) {
+      deleteCartCookie();
+      navigate("/");
+      alert("Successful order!");
+    } else {
+      navigate("/login");
+    }
   };
 
   useEffect(() => {

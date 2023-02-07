@@ -3,12 +3,16 @@ import { BrowserRouter } from "react-router-dom";
 import AppRouter from "./components/AppRouter.component";
 import NavBar from "./components/NavBar.component";
 import { useEffect, useState } from "react";
-import { getSetCookie } from "./utils/cookies.utils";
+import { getSetCookie, loginCookieExists, setCookie, deleteCookie, getCookie } from "./utils/cookies.utils";
 
 const App = () => {
-  const [isLoggedIn, setisLoggedIn] = useState(false);
+  const [isLoggedIn, setisLoggedIn] = useState(loginCookieExists("access-token"));
   const [cart, setCart] = useState([]);
   console.log(cart, "AS");
+  console.log(loginCookieExists("access-token"), "dddddddddddd");
+  deleteCookie("k");
+  console.log(getCookie("v"));
+
   // console.log(getCookie("access-token"), "!!!!!!");
   // const [data, setData] = React.useState(null);
 
@@ -29,8 +33,8 @@ const App = () => {
   // return <div>Hello2</div>;
   return (
     <BrowserRouter>
-      <NavBar />
-      <AppRouter cart={cart} setCart={setCart} />
+      <NavBar isLoggedIn={isLoggedIn} setisLoggedIn={setisLoggedIn} />
+      <AppRouter cart={cart} isLoggedIn={isLoggedIn} setCart={setCart} />
     </BrowserRouter>
   );
 };

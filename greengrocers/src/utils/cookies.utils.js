@@ -20,5 +20,40 @@ const setCookieValue = async function (cookieName, newValue) {
   Cookies.set(cookieName, await JSON.stringify(newValue));
 };
 
+
+const setCookie = function (cookieName, value) {
+  Cookies.set(cookieName, value);
+};
+
+const getCookie = function (cookieName) {
+  Cookies.get(cookieName);
+};
+
+const deleteCookie = function (cookieName) {
+  Cookies.remove(cookieName);
+};
+
+const loginCookieExists = function () {
+  return !!Cookies.get("access-token");
+};
+
+const deleteLoginCookie = function () {
+  Cookies.remove("access-token");
+};
+
+const deleteCartCookie = function () {
+  Cookies.remove("cart");
+};
+
 // module.exports = { getSetCookie };
-export { appendToCookie, getSetCookie, setCookieValue };
+export {
+  appendToCookie,
+  getSetCookie,
+  setCookieValue,
+  setCookie,
+  getCookie,
+  deleteCookie,
+  loginCookieExists,
+  deleteLoginCookie,
+  deleteCartCookie
+};

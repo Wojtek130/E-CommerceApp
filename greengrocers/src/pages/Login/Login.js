@@ -1,6 +1,7 @@
 import * as React from "react";
 import "./Login.scss";
 import Input from "../../components/Input.component";
+import { setCookie } from "../../utils/cookies.utils";
 
 const Login = () => {
   const [username, setUsername] = React.useState("");
@@ -36,9 +37,9 @@ const Login = () => {
         console.log(entry);
       }
 
-
       const result = await response.json();
-      document.cookie = `access-token=${result.token}`;
+      // document.cookie = `access-token=${result.token}`;
+      setCookie("access-token", result.token);
       console.log(result.token, "!!");
       setHide(!hide);
       setMessage(result.message);

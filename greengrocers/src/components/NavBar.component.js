@@ -8,18 +8,24 @@ import {
   REGISTRATION_ROUTE,
 } from "../utils/paths.util";
 import { useNavigate } from "react-router-dom";
+import {deleteLoginCookie, deleteCartCookie, deleteCookie } from "../utils/cookies.utils";
 
-function NavBar() {
-  const isLoggedInMock = false;
+
+function NavBar(props) {
   let navigate = useNavigate();
 
   const handleLogout = async (e) => {
-    console.log(e);
+    console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
     try {
       const response = await fetch("http://localhost:3001/logout", {
         method: "POST",
       });
       const result = await response.json();
+      deleteLoginCookie();
+      deleteCartCookie();
+      deleteCookie("access-token");
+      deleteCookie("cart");
+      props.setisLoggedIn(false);
       alert(result);
     } catch (error) {
       console.error(error);
@@ -51,11 +57,11 @@ function NavBar() {
               Registration
             </a>
           </li>
-          {isLoggedInMock ? (
+          {props.isLoggedIn ? (
             <li className="navigation__item">
               <a
                 className="navigation__link"
-                href={LOGIN_ROUTE}
+                // href={LOGIN_ROUTE}
                 onClick={handleLogout}
               >
                 Log out
