@@ -30,7 +30,7 @@ First, **install Postgres database** <br>
 `sudo apt install postgresql` <br>
 Then write 
 
-<code> sudo service postgresql start
+<code>sudo service postgresql start
 sudo passwd postgres
 sudo -u postgres psql
 CREATE DATABASE shopdb</code><br>
