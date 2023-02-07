@@ -60,6 +60,7 @@ const Cart = (props) => {
               deleteClick={deleteClick}
               price={p.productPrice}
               weight={p.productQuantity}
+              setCartChanged={setCartChanged}
             />
           );
         })
