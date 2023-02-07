@@ -25,18 +25,23 @@
   },
   "homepage": "https://github.com/Wojtek130/E-CommerceApp#readme",
   "dependencies": {
+    "@admin-bro/express": "^3.1.0",
+    "@admin-bro/sequelize": "^1.2.1",
+    "admin-bro": "^4.0.1",
     "bcryptjs": "^2.4.3",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
+    "express-formidable": "^1.2.0",
     "jsonwebtoken": "^9.0.0",
     "pg": "^8.9.0",
     "pg-hstore": "^2.3.4",
     "react-router-dom": "^6.8.0",
     "sass": "^1.58.0",
     "sequelize": "^6.28.0",
-    "sequelize-auto-migrations": "^1.0.3"
+    "sequelize-auto-migrations": "^1.0.3",
+    "tslib": "^2.5.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.20",
