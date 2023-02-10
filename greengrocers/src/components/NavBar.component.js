@@ -15,7 +15,6 @@ function NavBar(props) {
   let navigate = useNavigate();
 
   const handleLogout = async (e) => {
-    console.log("hhhhhhhhhhhhhhhhhhhhhhhhhhhhh");
     try {
       const response = await fetch("http://localhost:3001/logout", {
         method: "POST",
@@ -26,7 +25,7 @@ function NavBar(props) {
       deleteCookie("access-token");
       deleteCookie("cart");
       props.setisLoggedIn(false);
-      alert(result);
+      alert("Successfully Logged out");
     } catch (error) {
       console.error(error);
     }

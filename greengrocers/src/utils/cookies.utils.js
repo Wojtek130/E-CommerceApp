@@ -26,7 +26,7 @@ const setCookie = function (cookieName, value) {
 };
 
 const getCookie = function (cookieName) {
-  Cookies.get(cookieName);
+  return Cookies.get(cookieName);
 };
 
 const deleteCookie = function (cookieName) {

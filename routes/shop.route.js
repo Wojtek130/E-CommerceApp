@@ -10,7 +10,7 @@ router.get("/tags", shopController.AllTags);
 router.get("/api", shopController.helloFun);
 router.post("/login", loginController.login);
 router.post("/register", loginController.register);
-router.post("/logout", auth, loginController.logout);
+router.post("/logout", loginController.logout);
 router.post("/completeOrder", auth, shopController.completeOrder);
 
 

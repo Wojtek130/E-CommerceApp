@@ -43,8 +43,8 @@ const login = async function (req, res) {
 const logout = async function (req, res) {
   try {
     return res
-      .clearCookie("access_token")
       .status(200)
+      .clearCookie("access_token")
       .json({ message: "Successfully logged out 😏🍀" });
   } catch (err) {
     console.log(err);

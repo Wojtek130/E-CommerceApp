@@ -22,20 +22,25 @@ const AllTags = async function (req, res) {
 
 const completeOrder = async function (req, res) {
   // orderedProducts = [{productId : 5, quantity : 3}, {productId : 6, quantity : 5}]
-  const { userId, orderedProducts } = req.body;
-  const fullOrderInfo = { UserId: userId };
-  const fullOrder = await createFullOrder(fullOrderInfo);
-  const fullOrderId = fullOrder.dataValues.id;
-  console.log(fullOrder.dataValues);
-  for (const p of orderedProducts) {
-    const singleOrderInfo = {
-      productId: p.productId,
-      quantity: p.quantity,
-      FullOrderId: fullOrderId,
-    };
-    await createSingleOrder(singleOrderInfo);
+  try {
+    const { userId, orderedProducts } = req.body;
+    console.log(req.body, "wichtig");
+    const fullOrderInfo = { UserId: userId };
+    const fullOrder = await createFullOrder(fullOrderInfo);
+    const fullOrderId = fullOrder.dataValues.id;
+    console.log(fullOrder.dataValues);
+    for (const p of orderedProducts) {
+      const singleOrderInfo = {
+        productId: p.productId,
+        quantity: p.productQuantity,
+        FullOrderId: fullOrderId,
+      };
+      await createSingleOrder(singleOrderInfo);
+    }
+    res.status(200).send("Succefully saved the order");
+  } catch (error) {
+    return res.status(401).send("Some issues occured while saving the order");
   }
-  res.status(200).send("Succefully saved the order");
 };
 
 module.exports = {

@@ -9,6 +9,7 @@ import {
   setCookieValue,
   loginCookieExists,
   deleteCartCookie,
+  getCookie,
 } from "../../utils/cookies.utils";
 
 const Cart = (props) => {
@@ -17,22 +18,6 @@ const Cart = (props) => {
   const [cartChanged, setCartChanged] = useState(false);
 
   const path = "../../assets/";
-  const json = [
-    {
-      productId: "5",
-      productName: "asparagus",
-      productQuantity: "3",
-      productPath: "asparagus.jpg",
-      productPrice: "2",
-    },
-    {
-      productId: "6",
-      productName: "pineapple",
-      productQuantity: "2",
-      productPath: "pineapple.jpg",
-      productPrice: "7",
-    },
-  ];
 
   const deleteClick = async function (id) {
     let cart = await getSetCookie("cart");
@@ -42,11 +27,37 @@ const Cart = (props) => {
     setCartChanged((prev) => !prev);
   };
 
-  const order = function () {
+  const order = async function () {
     if (loginCookieExists()) {
-      deleteCartCookie();
-      navigate("/");
-      alert("Successful order!");
+      const c = await getCookie("cart");
+      console.log(c, typeof c, "kfkfkkfkf");
+      const cConv = await JSON.parse(c);
+      const order = new Array();
+      cConv.forEach((e) => {
+        console.log(e.productId, "idik", e.productQuantity, "qua");
+        const p = {
+          productId: e.productId,
+          productQuantity: e.productQuantity,
+        };
+        console.log(p, "importante");
+        order.push(p);
+      });
+      console.log(order, "aaaaaaaaaaaaaaaaaa");
+      try {
+        const response = await fetch("http://localhost:3001/completeOrder", {
+          method: "POST",
+          headers: {
+            "Content-type": "application/json",
+          },
+          body: JSON.stringify({
+            orderedProducts: order,
+            token: getCookie("access-token"),
+          }),
+        });
+        deleteCartCookie();
+        alert("The order successfully saved");
+        navigate("/");
+      } catch (error) {}
     } else {
       navigate("/login");
     }

@@ -28,6 +28,6 @@ const app = express();
 app.use(cookieParser());
 app.use(express.json());
 app.use(cors(corsOptions));
-app.use(express.static(path.resolve(__dirname, "../greengrocers/assets")));
+app.use('/assets',express.static(path.resolve(__dirname, "../greengrocers/assets"))); 
 
 module.exports = app;
