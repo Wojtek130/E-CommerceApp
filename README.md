@@ -24,7 +24,26 @@ All of the above +
 <img width="1063" alt="image" src="https://user-images.githubusercontent.com/74939070/217287505-ae66ee03-2b23-4344-b383-5b38942eb375.png">
 <img width="1072" alt="image" src="https://user-images.githubusercontent.com/74939070/217287577-7f00d0cd-4ac9-4344-891c-61d4ab384ea7.png">
 
+## Install dependencies:
+First, **install Postgres database** <br>
+**For Linux:**
+`sudo apt install postgresql` <br>
+Then write 
+
+<code>sudo service postgresql start
+sudo passwd postgres
+sudo -u postgres psql
+CREATE DATABASE shopdb</code><br>
+
+**For Windows:**
+manual installation [here](https://www.postgresql.org/download/windows/) <br>
+After that please create shopdb database manually.
+
+Then, **install all other packages**:<br>
+Paste this command in terminal `npm install` in folder with project and also in /greengrocers.
+
 ## Start the app:
-First, write `npm install` in folder with project and also in /greengrocers.
+`npm start` in /greengrocers to start frontend server and <br>
+`npm run dev` in / to start backend
 
 
