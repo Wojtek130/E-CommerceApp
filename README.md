@@ -17,7 +17,7 @@ All of the above +
 2. Order products
 3. See admin panel (with the right permissions)
 
-
+![](https://i.imgur.com/O0JmfFN.gif)
 <img width="1064" alt="image" src="https://user-images.githubusercontent.com/74939070/217286955-09135e3b-2f6d-4ccd-b2ef-3956886f478f.png">
 <img width="1057" alt="image" src="https://user-images.githubusercontent.com/74939070/217286100-3b17f5f1-0a78-4c36-815a-0134a86a71b3.png">
 <img width="1073" alt="image" src="https://user-images.githubusercontent.com/74939070/217287393-9d377eb3-a229-4d31-a52b-becb05a0dd0e.png">
