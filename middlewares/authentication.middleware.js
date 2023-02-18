@@ -4,16 +4,11 @@ const config = process.env;
 
 const verifyToken = (req, res, next) => {
   const token = req.body.token;
-  console.log(req.body, "jgjgjgjjgjgjgj");
-  console.log(token);
   if (!token) {
     return res.status(403).send("Access forbidden. A token is required for authentication");
   }
   try {
     const data = jwt.verify(token, config.TOKEN_KEY);
-    console.log(data);
-    console.log(data.userId);
-    console.log(data.isAdmin);
     req.body.userId = data.userId;
     req.body.userName = data.username;
     req.body.isAdmin = data.isAdmin;

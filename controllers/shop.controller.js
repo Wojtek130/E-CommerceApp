@@ -24,11 +24,9 @@ const completeOrder = async function (req, res) {
   // orderedProducts = [{productId : 5, quantity : 3}, {productId : 6, quantity : 5}]
   try {
     const { userId, orderedProducts } = req.body;
-    console.log(req.body, "wichtig");
     const fullOrderInfo = { UserId: userId };
     const fullOrder = await createFullOrder(fullOrderInfo);
     const fullOrderId = fullOrder.dataValues.id;
-    console.log(fullOrder.dataValues);
     for (const p of orderedProducts) {
       const singleOrderInfo = {
         productId: p.productId,

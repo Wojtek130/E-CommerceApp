@@ -14,7 +14,6 @@ const Product = function (props) {
     };
     props.setCart((prevCart) => [...prevCart, currentProduct]);
     await appendToCookie("cart", currentProduct);
-    console.log(Cookies.get("cart"), "aaaa");
     alert("Product successfully added to cart")
   };
   return (

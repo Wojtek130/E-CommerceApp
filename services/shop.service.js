@@ -1,4 +1,3 @@
-// const {Product, ProductTag} = require("../models");
 const { User } = require("../models");
 const db = require("../models");
 const Product = db.Product;

@@ -22,10 +22,8 @@ const CartComponent = (props) => {
     let val = Math.round(event.target.value * price * 100) / 100;
     setFullprice(val);
     let cart = await getSetCookie("cart");
-    console.log(cart);
     const ind = cart.findIndex((obj) => obj.productId === props.id);
     cart[ind].productQuantity = event.target.value;
-    console.log(cart);
     await setCookieValue("cart", cart);
     props.setCartChanged((prev) => !prev);
   };

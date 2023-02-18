@@ -1,9 +1,7 @@
 
 const ProductTypeRadio = function (props) {
   const handleChange = e => {
-    console.log(e.target.value);
     props.setType(e.target.value)
-
   };
 
   return (

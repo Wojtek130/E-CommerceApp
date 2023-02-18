@@ -8,10 +8,7 @@ import { getSetCookie, loginCookieExists, setCookie, deleteCookie, getCookie } f
 const App = () => {
   const [isLoggedIn, setisLoggedIn] = useState(loginCookieExists("access-token"));
   const [cart, setCart] = useState([]);
-  console.log(cart, "AS");
-  console.log(loginCookieExists("access-token"), "dddddddddddd");
   deleteCookie("k");
-  console.log(getCookie("v"));
 
   // console.log(getCookie("access-token"), "!!!!!!");
   // const [data, setData] = React.useState(null);

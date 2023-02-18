@@ -17,7 +17,6 @@ import Admin from "../pages/Admin/Admin";
 import { loginCookieExists } from "../utils/cookies.utils";
 
 const AppRouter = (props) => {
-  console.log(props.isLoggedIn, "router");
   return (
     <Routes>
       {!props.isLoggedIn ? (
