@@ -30,8 +30,5 @@ module.exports = function (sequelize) {
     },
   });
   User.attributes = User.rawAttributes;
-  // User.associate = function (models) {
-  //   User.hasMany(models.FullOrder);
-  // };
   return User;
 };

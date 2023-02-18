@@ -37,8 +37,6 @@ const Product = function (props) {
             type="number"
             id="weight"
             name="weight"
-            // min=".1"
-            // max="100"
             className="product__weightinput"
           ></input>
           <input
@@ -48,8 +46,6 @@ const Product = function (props) {
             onClick={handleAddToCart}
           />
         </form>
-        {/* </div> */}
-        {/* </div> */}
       </div>
     </div>
   );

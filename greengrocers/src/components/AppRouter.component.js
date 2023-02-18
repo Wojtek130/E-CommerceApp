@@ -1,5 +1,4 @@
 import React from "react";
-// import "./NavBar.component.css";
 import {
   LOGIN_ROUTE,
   SHOP_ROUTE,
@@ -16,8 +15,6 @@ import Logout from "../pages/Logout/Logout";
 import Registration from "../pages/Registration/Registration";
 import Admin from "../pages/Admin/Admin";
 import { loginCookieExists } from "../utils/cookies.utils";
-
-//import { observer } from "mobx-react-lite";
 
 const AppRouter = (props) => {
   console.log(props.isLoggedIn, "router");
@@ -45,7 +42,12 @@ const AppRouter = (props) => {
         element={<Cart setCart={props.setCart} cart={props.cart} />}
         exact
       />
-      <Route key={ADMIN_ROUTE} path={ADMIN_ROUTE} element={<Admin />} exact />
+      <Route
+        key={ADMIN_ROUTE}
+        path={ADMIN_ROUTE}
+        element={<Admin />}
+        exact
+      />
       <Route
         key={SHOP_ROUTE}
         path={SHOP_ROUTE}

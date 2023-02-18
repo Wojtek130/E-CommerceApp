@@ -19,7 +19,6 @@
     border-radius: $border-radius;
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem rgba(black, 0.15);
-    // background-color: rgba(green, $alpha: 0.5);
     background-color: rgba(white, $alpha: 0.6);
     border-radius: 5px;
 
@@ -46,7 +45,6 @@
     font-weight: 300;
     text-transform: uppercase;
     color: white;
-    // background: $primary-gradient;
     padding: 1rem;
     position: absolute;
     top: 50%;
@@ -57,15 +55,14 @@
   &__backform {
     position: absolute;
     top: 50%;
-    left: 50%; /*relates to the parent's width/hight*/
-    transform: translate(-50%, -50%); /*relates to the element's width/hight*/
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
     color: white;
     justify-content: space-between;
-    // align-items: stretch;
     & * {
       margin: 0 0 2rem 0;
     }
@@ -91,11 +88,9 @@
 
   &__price-value {
     font-size: 3rem;
-    // font-weight: 100;
   }
 
   &__weight {
     font-size: 3rem;
-    // text-transform: uppercase;
   }
 }

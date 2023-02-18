@@ -12,11 +12,9 @@ const Filters = (props) => {
       <section className="filters">
         <form onSubmit={handleSubmit} className="filters__form">
         <img className="filters__form__logo" src={require(`../assets/logo2.png`)} alt=""  />
-
           <ProductType setType={props.setType}/>
           <ProductTags setTags={props.setTags} />
           <ProductName setName={props.setName}/>
-          {/* <input onSubmit={handleSubmit} type="submit" value="Apply filters" className="btn filters__form__button" /> */}
         </form>
       </section>
     </>

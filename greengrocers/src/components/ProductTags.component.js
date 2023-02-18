@@ -1,8 +1,6 @@
 import ProductTagCheckbox from "./ProductTagCheckbox.component";
 import React, { useEffect, useState } from "react";
 
-// import "./ProductTags.component.scss";
-
 const ProductTags = function (props) {
   const [tags, setTags] = useState([]);
 

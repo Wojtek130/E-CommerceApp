@@ -7,22 +7,18 @@ module.exports = function (sequelize) {
     ProductId: {
       type: DataTypes.INTEGER,
       references: {
-        model: Product, // 'Movies' would also work
+        model: Product, 
         key: "id",
       },
     },
     TagId: {
       type: DataTypes.INTEGER,
       references: {
-        model: Tag, // 'Actors' would also work
+        model: Tag, 
         key: "id",
       },
     },
   });
   ProductTag.attributes = ProductTag.rawAttributes;
-  // ProductTag.associate = function (models) {
-  //   ProductTag.belongsTo(models.Product);
-  //   ProductTag.belongsTo(models.Tag);
-  // };
   return ProductTag;
 };

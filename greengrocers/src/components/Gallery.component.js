@@ -24,10 +24,8 @@ const Gallery = (props) => {
           if (props.name && !productName.startsWith(props.name))  {
             return<></>;
           }
-          // console.log(props.tags);
           let matchingTag = false;
           if (props.tags.length > 0) {
-            // console.log("si");
             productTags.forEach(t => {
               if (props.tags.includes(t)) {
                 matchingTag = true;
@@ -61,8 +59,6 @@ const Gallery = (props) => {
   return (
     <section className="gallery">
       {pictures}
-      {/* <Product photoPath="banana.jpg" /> */}
-      {/* <Product photoPath="onion.jpg" /> */}
     </section>
   );
 };

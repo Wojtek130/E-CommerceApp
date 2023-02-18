@@ -1,10 +1,5 @@
 @import "../abstracts/variables";
 
-// $primary-color: peachpuff;
-// $primary-color: #F2C949;
-// $primary-color: #4C9A2A;
-// $hover-color: peru;
-// $hover-color: #C16512;
 
 .navigation {
     display: flex;
@@ -12,10 +7,8 @@
     align-items: center;
     list-style-type: none;
     background: $primary-gradient;
-    // -webkit-gradient(linear, left top, right bottom, yellow, black)
     margin-top: 0;
     padding : 2rem 3rem;
-    // padding : 0;
     max-height: 6rem;
     margin : 0;
     border-radius: $border-radius-big;

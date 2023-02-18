@@ -27,12 +27,5 @@ module.exports = function (sequelize) {
     },
   });
   Product.attributes = Product.rawAttributes;
-  // Product.associate = function (models) {
-  //   Product.belongsToMany(models.Tag, {
-  //     through: models.ProductTag,
-  //     foreignKey: "ProductId",
-  //     otherKey: "TagId",
-  //   });
-  // };
   return Product;
 };

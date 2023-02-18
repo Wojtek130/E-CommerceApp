@@ -14,7 +14,6 @@ const CartComponent = (props) => {
   const price = Number(props.price);
   const weight = Number(props.weight);
   const id = Number(props.id);
-  // const setPrc = props.setPrc;
   const [fullprice, setFullprice] = useState(price * weight);
   const changePrice = async function (event) {
     if (!event.target.value) {

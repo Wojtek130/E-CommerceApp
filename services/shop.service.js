@@ -11,7 +11,6 @@ const getProductWithTags = async function () {
   const products = await Product.findAll({
     attributes: ["id", "name", "price", "isFruit", "photoPath"],
     include: { model: Tag, required: false },
-    // required: false,
   });
   const out = new Array();
   products.forEach((p) => {
@@ -47,7 +46,6 @@ const getTags = async function () {
     out.push(t["dataValues"]);
   });
   return out;
-  // console.log(tags);
 };
 
 const getProductIdForName = async function (nameArg) {

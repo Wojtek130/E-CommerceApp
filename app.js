@@ -7,15 +7,6 @@ var whitelist = ["http://localhost:3000", "http://localhost:3001"];
 
 var corsOptions = {
   credentials: "include",
-  //   origin: function (origin, callback) {
-  //     if (whitelist.indexOf(origin) !== -1) {
-  //       callback(null, true);
-  //     } else {
-  //       callback(new Error("Not allowed by CORS"));
-  //     }
-  //   },
-  //   allowedHeaders: ["Content-Type", "Authorization", "Set-Cookie"],
-  //   exposedHeaders: ["Content-Type", "Authorization", "Set-Cookie"],
   exposedHeaders: [
     "content-length",
     "authorization",

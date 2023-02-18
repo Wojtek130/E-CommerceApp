@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const shopController = require("../controllers/shop.controller");
 const loginController = require("../controllers/login.controller");
-
-const auth = require("../middlewares/auth.middleware");
+const auth = require("../middlewares/authentication.middleware");
 
 router.get("/products", shopController.AllProductsWithTags);
 router.get("/tags", shopController.AllTags);

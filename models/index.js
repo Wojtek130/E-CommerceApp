@@ -64,18 +64,6 @@ db.FullOrder.belongsTo(db.User);
 
 db.Product.belongsToMany(db.Tag, { through: db.ProductTag });
 db.Tag.belongsToMany(db.Product, { through: db.ProductTag });
-// db.Product.associate(db);
-// db.Tag.associate(db);
-// db.ProductTag.associate(db);
-
-
-// db.Product.associate = function (models) {
-//   db.Product.belongsToMany(models.Tag, {
-//     through: models.ProductTag,
-//     foreignKey: "ProductId",
-//     otherKey: "TagId",
-//   });
-// };
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
