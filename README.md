@@ -1,6 +1,6 @@
 # Mr. Broccoli - E-Commerce app
 ## The idea of the project:
-***Mr. Broccoli*** is online fruit & vegetables grocery ordering app. Made as a final project for the WEPPO course. <br>
+***Mr. Broccoli*** is an online fruit & vegetables grocery ordering app. Made as a final project for the WEPPO (Chosen elements of practical software development) course. <br>
 The primary implementation uses **Postgres** Database to store the data, **React** for frontend and **Express.js** for backend.
 
 ## Application allows you to:
@@ -25,7 +25,7 @@ All of the above +
 <img width="1072" alt="image" src="https://user-images.githubusercontent.com/74939070/217287577-7f00d0cd-4ac9-4344-891c-61d4ab384ea7.png">
 
 ## Install dependencies:
-First, **install Postgres database** <br>
+First, **install Postgres** <br>
 **For Linux:**
 `sudo apt install postgresql` <br>
 Then write 
@@ -40,10 +40,10 @@ manual installation [here](https://www.postgresql.org/download/windows/) <br>
 After that please create shopdb database manually.
 
 Then, **install all other packages**:<br>
-Paste this command in terminal `npm install` in folder with project and also in /greengrocers.
+Run this command `npm install` in the project root directory as well as in /greengrocers.
 
 ## Start the app:
 `npm start` in /greengrocers to start frontend server and <br>
-`npm run dev` in / to start backend
+`npm start` in / to start backend
 
 
